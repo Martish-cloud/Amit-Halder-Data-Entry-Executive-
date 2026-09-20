@@ -1,12 +1,15 @@
-# 🤖 Amit Halder — GenAI Developer · Machine Learning Engineer
+# 📊 Amit Halder — Data Entry Executive & Operations Professional
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=220&text=Amit%20Halder&fontAlign=50&fontAlignY=40&color=gradient&customColorList=12,17,20,24&fontColor=ffffff&fontSize=55&desc=GenAI%20Developer%20%7C%20Machine%20Learning%20Engineer&descAlign=50&descAlignY=62&descSize=20" width="100%" />
+  <img
+    src="https://capsule-render.vercel.app/api?type=waving&height=230&text=Amit%20Halder&fontAlign=50&fontAlignY=40&color=gradient&customColorList=12,17,20,24&fontColor=ffffff&fontSize=58&desc=Data%20Entry%20Executive%20%7C%20Operations%20Professional&descAlign=50&descAlignY=63&descSize=20"
+    width="100%"
+  />
 </p>
 
 <p align="center">
-  <a href="https://github.com/Martish-cloud/Amit-Halder-Machine-Learning-Engineer-">
-    <img src="https://img.shields.io/badge/GitHub-Repository-111111?style=for-the-badge&logo=github&logoColor=white" />
+  <a href="https://github.com/Martish-cloud/Amit-Halder-Data-Entry-Executive-">
+    <img src="https://img.shields.io/badge/Portfolio-GitHub-111827?style=for-the-badge&logo=github&logoColor=white" />
   </a>
   <a href="https://www.linkedin.com/in/amit-halder">
     <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
@@ -17,219 +20,101 @@
 </p>
 
 <p align="center">
-  <b>Generative AI • Machine Learning • AI Automation • NLP • Data Analytics</b>
+  <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=20&duration=2800&pause=900&color=0EA5E9&center=true&vCenter=true&width=750&lines=Data+Entry+%26+Data+Processing;ERP+Data+Management;Microsoft+Excel+%7C+Power+BI+%7C+SQL;Inventory+%26+Order+Tracking;Documentation+%26+Reporting;Operations+%26+Production+Data" />
 </p>
-
----
-
-## ✨ About Me
-
-I'm **Amit Halder**, a **Generative AI Developer and Machine Learning Engineer** focused on LLM integration, prompt engineering, AI workflow automation, API integration, NLP, and data-driven business solutions.
-
-My professional background combines **AI/ML and automation with extensive printing production operations and data-analysis experience**, giving me a practical perspective on applying technology to real operational workflows.
-
-> **Building practical AI systems that connect intelligent models with real-world business processes.**
-
----
-
-## 🧠 Core Expertise
-
-<table>
-<tr>
-<td width="50%">
-
-### 🤖 Generative AI
-- Large Language Models (LLMs)
-- Prompt Engineering
-- Few-shot & Zero-shot prompting
-- Fine-tuning
-- AI-driven workflows
-- AI application development
-
-</td>
-
-<td width="50%">
-
-### 🧬 Machine Learning
-- Machine Learning
-- Natural Language Processing
-- NLP optimization
-- Chatbot workflows
-- GANs
-- Synthetic Data Generation
-
-</td>
-</tr>
-
-<tr>
-<td>
-
-### ⚙️ AI Automation
-- AI Workflow Automation
-- API Integration
-- No-code AI automation
-- Business workflow optimization
-- Scalable AI workflows
-
-</td>
-
-<td>
-
-### 📊 Data & BI
-- Microsoft Excel
-- SQL
-- Power BI
-- Data Analysis
-- Business Intelligence
-- Dashboarding
-
-</td>
-</tr>
-</table>
-
----
-
-# 🚀 What I Work With
 
 <p align="center">
-
-<img src="https://img.shields.io/badge/Generative%20AI-111827?style=for-the-badge&logo=openai&logoColor=white" />
-<img src="https://img.shields.io/badge/Machine%20Learning-111827?style=for-the-badge&logo=scikitlearn&logoColor=white" />
-<img src="https://img.shields.io/badge/NLP-111827?style=for-the-badge&logo=apache-spark&logoColor=white" />
-<img src="https://img.shields.io/badge/Python-111827?style=for-the-badge&logo=python&logoColor=FFD43B" />
-<img src="https://img.shields.io/badge/Excel-111827?style=for-the-badge&logo=microsoftexcel&logoColor=217346" />
-<img src="https://img.shields.io/badge/Power%20BI-111827?style=for-the-badge&logo=powerbi&logoColor=F2C811" />
-<img src="https://img.shields.io/badge/SQL-111827?style=for-the-badge&logo=postgresql&logoColor=336791" />
-<img src="https://img.shields.io/badge/API%20Integration-111827?style=for-the-badge&logo=fastapi&logoColor=white" />
-
+  <b>📋 Data Entry</b>
+  &nbsp;•&nbsp;
+  <b>🗂️ Data Management</b>
+  &nbsp;•&nbsp;
+  <b>🏢 ERP</b>
+  &nbsp;•&nbsp;
+  <b>📊 Excel</b>
+  &nbsp;•&nbsp;
+  <b>📈 Reporting</b>
+  &nbsp;•&nbsp;
+  <b>⚙️ Operations</b>
 </p>
 
 ---
 
-# 💼 Professional Experience
+## 🖼️ Portfolio Preview
 
-## 🏢 GenAI Developer — Intuit
-**Remote · Jan 2026 – Apr 2026**
+<p align="center">
+  <img
+    src="./public/screenshots/portfolio-preview.png"
+    alt="Amit Halder Data Entry Executive Portfolio Preview"
+    width="95%"
+  />
+</p>
 
-- Developed prompt engineering strategies using few-shot and zero-shot approaches
-- Integrated APIs to extend AI model functionality
-- Built scalable AI-driven workflows for business applications
-- Supported ethical AI implementation and compliance
+<p align="center">
+  <i>Premium responsive portfolio — desktop & mobile experience</i>
+</p>
 
----
-
-## 🧠 GenAI Intern — Mphasis
-**Remote · Nov 2025 – Dec 2025**
-
-- Built chatbot workflows using LLMs
-- Improved NLP model performance through prompt optimization
-- Assisted with AI solution development
-
----
-
-## 🏭 Assistant PPC Manager / R&D Companion — Pioneer Mega Printers
-**Jun 2025 – Nov 2025**
-
-- Implemented ERP systems for inventory tracking
-- Improved production efficiency and workflow automation
-- Conducted operational data analysis
+> 💡 **Tip:** Add your actual portfolio screenshot at  
+> `public/screenshots/portfolio-preview.png`
+> 
+> Recommended size: **1600 × 1000 px**
 
 ---
 
-## ⚙️ Production Supervisor / Quality Executive — Jay Boxes
-**Mar 2024 – May 2025**
+# 👋 About Me
 
-- Managed production, quality control, and logistics
-- Improved ERP data accuracy and reporting
+I'm **Amit Halder**, a **Data Entry Executive and Operations Professional** experienced in:
 
----
+- Data entry and data processing
+- Data verification and validation
+- ERP data management
+- Record maintenance
+- Inventory tracking
+- Order tracking
+- Dispatch coordination
+- Documentation
+- Report preparation
+- Production data management
+- Microsoft Excel
+- Power BI
+- SQL
+- Data analysis
 
-## 📦 PPC Assistant / Dispatch Coordinator — York Print Pvt. Ltd.
-**Unit-IV · Ahmedabad · Mar 2023 – Feb 2024**
+My professional experience combines **data management with production and operational workflows**, with a strong focus on accurate information, organized documentation, and reliable operational records.
 
-- Supported production planning and control
-- Managed job cards, invoices, and dispatch documentation
-- Tracked orders and delivery schedules
-- Supported Material Requirements Planning (MRP)
-- Ensured quality and dispatch procedure compliance
-
----
-
-## 📋 PPC Executive / WIP Management — York Print Pvt. Ltd.
-**Unit-VI · Assam · Mar 2020 – Feb 2023**
-
-- Managed Work-in-Progress (WIP)
-- Monitored production-stage WIP status
-- Maintained WIP reports and documentation
-- Ensured material availability and allocation
+> **Accurate Data. Organized Operations. Reliable Information.**
 
 ---
 
-# 🎓 Education
-
-### 🎓 Bachelor of Arts
-**Indira Gandhi National Open University (IGNOU)**  
-2026 – 2029 · Pursuing
-
-### 📚 Higher Secondary
-**West Bengal Council of Higher Secondary Education (WBCHSE)**  
-Arts
-
-### 🇫🇷 French Language Learning
-**Henry Harvin Education**  
-2026 – 2028 · Pursuing
-
----
-
-# 🏆 Certifications & Learning
-
-| Certification / Course | Provider |
-|---|---|
-| Australia Data Analytics Job Simulation | Deloitte |
-| Advance Spoken English | Simplilearn |
-| Spoken English Certification | Great Learning |
-| n8n Automation — No-Code AI Builder | Simplilearn |
-| Prompt Engineering | IBM |
-| Python 101 for Data Science | IBM |
-| Time Management | LearnTube.AI |
-| Generative AI | Tutedude |
-| DaVinci Resolve | Tutedude |
-| UI/UX Designing | Tutedude |
-| Machine Learning Engineering | Udemy |
-| GenAI Developer | Udemy |
-| Japanese Language | Udemy |
-
----
-
-# 🌍 Languages
-
-| Language | Proficiency |
-|---|---|
-| 🇮🇳 Bengali | Native |
-| 🇬🇧 English | Professional |
-| 🇮🇳 Hindi | Professional |
-| 🇮🇳 Assamese | Basic |
-| 🇫🇷 French | Elementary |
-| 🇯🇵 Japanese | Elementary |
-
----
-
-# 📈 Professional Focus
+# 🎯 Professional Focus
 
 ```text
-Generative AI
-      │
-      ▼
-LLMs + Prompt Engineering
-      │
-      ▼
-Machine Learning + NLP
-      │
-      ▼
-AI Automation + API Integration
-      │
-      ▼
-Data Analysis + Business Intelligence
-      │
-      ▼
-Real-World Business Applications
+                    ┌─────────────────────┐
+                    │     DATA ENTRY      │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │ DATA VERIFICATION   │
+                    │    & VALIDATION     │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │   DATA MANAGEMENT   │
+                    │     & RECORDS       │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │   ERP & OPERATIONS  │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │ REPORTING & ANALYSIS│
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │ BUSINESS INFORMATION│
+                    └─────────────────────┘
