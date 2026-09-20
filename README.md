@@ -1,150 +1,235 @@
-# Amit Halder — Premium Personal Portfolio
+# 🤖 Amit Halder — GenAI Developer · Machine Learning Engineer
 
-A high-end, responsive, and animated personal portfolio website for **Amit Halder**, strictly grounded in the official curriculum vitae as the single source of truth.
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&height=220&text=Amit%20Halder&fontAlign=50&fontAlignY=40&color=gradient&customColorList=12,17,20,24&fontColor=ffffff&fontSize=55&desc=GenAI%20Developer%20%7C%20Machine%20Learning%20Engineer&descAlign=50&descAlignY=62&descSize=20" width="100%" />
+</p>
 
-Developed for modern browsers with React, Vite, TypeScript, Tailwind CSS, Framer Motion, and Lucide Icons.
+<p align="center">
+  <a href="https://github.com/Martish-cloud/Amit-Halder-Machine-Learning-Engineer-">
+    <img src="https://img.shields.io/badge/GitHub-Repository-111111?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+  <a href="https://www.linkedin.com/in/amit-halder">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+  <a href="mailto:askfor.amithalder@gmail.com">
+    <img src="https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+</p>
 
----
-
-## 🚀 Live Demo & Repository
-
-- **Repository**: [https://github.com/Martish-cloud/Amit-Halder-Data-Entry-Executive-.git](https://github.com/Martish-cloud/Amit-Halder-Data-Entry-Executive-.git)
-- **Role**: Data Entry Executive & Operations Professional
-- **Location**: Kolkata, West Bengal, India
-
----
-
-## 🛠️ Tech Stack
-
-- **Framework**: React 19 + Vite 8
-- **Language**: TypeScript 5.8+
-- **Styling**: Tailwind CSS v4 (Obsidian & Electric Cyan Theme)
-- **Motion & Interactions**: Framer Motion (`framer-motion`), `canvas-confetti`
-- **Icons**: Lucide React (`lucide-react`) + Custom SVG Monograms
-- **Quality & Linting**: Oxlint + TypeScript strict mode
-- **SEO & Accessibility**: Schema.org `Person` JSON-LD, OpenGraph, Twitter Cards, WCAG 2.1 AA compliant, `prefers-reduced-motion` support
+<p align="center">
+  <b>Generative AI • Machine Learning • AI Automation • NLP • Data Analytics</b>
+</p>
 
 ---
 
-## 📋 Features & Sections
+## ✨ About Me
 
-1. **Floating Glassmorphic Navigation**:
-   - Scroll-spy indicator highlighting active sections
-   - Responsive mobile animated drawer with backdrop blur
-   - Quick one-click CV download action
+I'm **Amit Halder**, a **Generative AI Developer and Machine Learning Engineer** focused on LLM integration, prompt engineering, AI workflow automation, API integration, NLP, and data-driven business solutions.
 
-2. **Hero Section**:
-   - Bold editorial typography with smooth staggered reveals
-   - Professional identity badge & interactive SVG Operations & Data Pipeline Graphic
-   - Primary CTAs: View Experience, Explore Skills, Contact Me, Download CV
+My professional background combines **AI/ML and automation with extensive printing production operations and data-analysis experience**, giving me a practical perspective on applying technology to real operational workflows.
 
-3. **About & Operations Philosophy**:
-   - Faithful representation of Amit Halder's professional summary
-   - 4 verified operational pillars: Data Accuracy, ERP & Inventory, Order & Dispatch, Analytics & Reporting
-   - 4 verified CV metric indicators (3 Industrial Roles, 22 Technical Skills, 6 Languages, 100% Data Accuracy Focus)
-
-4. **Experience Timeline**:
-   - Interactive vertical timeline with glowing scroll progress indicator
-   - Expandable/collapsible responsibility cards with custom bullet indicators
-   - Roles at **Pioneer Mega Printers**, **Jay Boxes**, and **York Print Pvt. Ltd.**
-
-5. **Skills Dashboard**:
-   - Categorized filter tabs: *All*, *Data & Operations*, *Analytics & Business Tools*, *ERP & Planning*
-   - Interactive search bar to filter across all 22 verified skills
-   - Visual category cards without arbitrary fake percentage bars
-
-6. **Education**:
-   - Indira Gandhi National Open University (IGNOU) — B.A. (Pursuing 2026–2029)
-   - West Bengal Council of Higher Secondary Education (WBCHSE) — Higher Secondary (Arts)
-
-7. **Languages**:
-   - Bengali (Native), English (Professional), Hindi (Professional), Assamese (Basic), French (Elementary), Japanese (Elementary)
-   - Clean fluency meter badges
-
-8. **Contact Hub**:
-   - Direct 1-click clipboard copy with toast feedback for Email (`askfor.amithalder@gmail.com`) and Phone (`(+91) 7003660883`)
-   - Interactive mailto composer with pre-filled inquiry template
-   - LinkedIn profile link
-
-9. **Resume Asset**:
-   - Downloadable official CV document (`Amit_Halder_Resume.pdf`) in `public/` directory
-   - Modal preview with print / download actions and celebratory feedback
+> **Building practical AI systems that connect intelligent models with real-world business processes.**
 
 ---
 
-## 💻 Local Development Setup
+## 🧠 Core Expertise
 
-### Prerequisites
+<table>
+<tr>
+<td width="50%">
 
-- Node.js 18+ (tested on Node v24.20.0)
-- npm 9+ (tested on npm 11.19.0)
+### 🤖 Generative AI
+- Large Language Models (LLMs)
+- Prompt Engineering
+- Few-shot & Zero-shot prompting
+- Fine-tuning
+- AI-driven workflows
+- AI application development
 
-### Installation
+</td>
 
-```bash
-# Clone the repository
-git clone https://github.com/Martish-cloud/Amit-Halder-Data-Entry-Executive-.git
+<td width="50%">
 
-# Navigate into the project folder
-cd Amit-Halder-Data-Entry-Executive-
+### 🧬 Machine Learning
+- Machine Learning
+- Natural Language Processing
+- NLP optimization
+- Chatbot workflows
+- GANs
+- Synthetic Data Generation
 
-# Install dependencies
-npm install
-```
+</td>
+</tr>
 
-### Running Locally
+<tr>
+<td>
 
-```bash
-npm run dev
-```
+### ⚙️ AI Automation
+- AI Workflow Automation
+- API Integration
+- No-code AI automation
+- Business workflow optimization
+- Scalable AI workflows
 
-Visit `http://localhost:5173` in your browser.
+</td>
 
----
+<td>
 
-## 🏗️ Build & Production
+### 📊 Data & BI
+- Microsoft Excel
+- SQL
+- Power BI
+- Data Analysis
+- Business Intelligence
+- Dashboarding
 
-```bash
-# Type check and build production bundle
-npm run build
-
-# Preview production build locally
-npm run preview
-
-# Run linting check
-npm run lint
-```
-
-Production output will be generated inside the `dist/` directory.
-
----
-
-## 🚢 Deployment Instructions
-
-### Deploying to GitHub Pages
-
-1. In `vite.config.ts`, add the repository base path:
-   ```ts
-   export default defineConfig({
-     base: '/Amit-Halder-Data-Entry-Executive-/',
-     // ...
-   })
-   ```
-2. Build the project:
-   ```bash
-   npm run build
-   ```
-3. Deploy the `dist` folder to GitHub Pages using `gh-pages` or a GitHub Actions workflow.
-
-### Deploying to Vercel / Netlify / Cloudflare Pages
-
-Simply import the repository in Vercel or Netlify:
-- **Build Command**: `npm run build`
-- **Output Directory**: `dist`
-- **Node Version**: 18.x or 20.x
+</td>
+</tr>
+</table>
 
 ---
 
-## 📄 License & Content Integrity
+# 🚀 What I Work With
 
-All personal, academic, and occupational data presented in this application is strictly sourced from the curriculum vitae of Amit Halder.
+<p align="center">
+
+<img src="https://img.shields.io/badge/Generative%20AI-111827?style=for-the-badge&logo=openai&logoColor=white" />
+<img src="https://img.shields.io/badge/Machine%20Learning-111827?style=for-the-badge&logo=scikitlearn&logoColor=white" />
+<img src="https://img.shields.io/badge/NLP-111827?style=for-the-badge&logo=apache-spark&logoColor=white" />
+<img src="https://img.shields.io/badge/Python-111827?style=for-the-badge&logo=python&logoColor=FFD43B" />
+<img src="https://img.shields.io/badge/Excel-111827?style=for-the-badge&logo=microsoftexcel&logoColor=217346" />
+<img src="https://img.shields.io/badge/Power%20BI-111827?style=for-the-badge&logo=powerbi&logoColor=F2C811" />
+<img src="https://img.shields.io/badge/SQL-111827?style=for-the-badge&logo=postgresql&logoColor=336791" />
+<img src="https://img.shields.io/badge/API%20Integration-111827?style=for-the-badge&logo=fastapi&logoColor=white" />
+
+</p>
+
+---
+
+# 💼 Professional Experience
+
+## 🏢 GenAI Developer — Intuit
+**Remote · Jan 2026 – Apr 2026**
+
+- Developed prompt engineering strategies using few-shot and zero-shot approaches
+- Integrated APIs to extend AI model functionality
+- Built scalable AI-driven workflows for business applications
+- Supported ethical AI implementation and compliance
+
+---
+
+## 🧠 GenAI Intern — Mphasis
+**Remote · Nov 2025 – Dec 2025**
+
+- Built chatbot workflows using LLMs
+- Improved NLP model performance through prompt optimization
+- Assisted with AI solution development
+
+---
+
+## 🏭 Assistant PPC Manager / R&D Companion — Pioneer Mega Printers
+**Jun 2025 – Nov 2025**
+
+- Implemented ERP systems for inventory tracking
+- Improved production efficiency and workflow automation
+- Conducted operational data analysis
+
+---
+
+## ⚙️ Production Supervisor / Quality Executive — Jay Boxes
+**Mar 2024 – May 2025**
+
+- Managed production, quality control, and logistics
+- Improved ERP data accuracy and reporting
+
+---
+
+## 📦 PPC Assistant / Dispatch Coordinator — York Print Pvt. Ltd.
+**Unit-IV · Ahmedabad · Mar 2023 – Feb 2024**
+
+- Supported production planning and control
+- Managed job cards, invoices, and dispatch documentation
+- Tracked orders and delivery schedules
+- Supported Material Requirements Planning (MRP)
+- Ensured quality and dispatch procedure compliance
+
+---
+
+## 📋 PPC Executive / WIP Management — York Print Pvt. Ltd.
+**Unit-VI · Assam · Mar 2020 – Feb 2023**
+
+- Managed Work-in-Progress (WIP)
+- Monitored production-stage WIP status
+- Maintained WIP reports and documentation
+- Ensured material availability and allocation
+
+---
+
+# 🎓 Education
+
+### 🎓 Bachelor of Arts
+**Indira Gandhi National Open University (IGNOU)**  
+2026 – 2029 · Pursuing
+
+### 📚 Higher Secondary
+**West Bengal Council of Higher Secondary Education (WBCHSE)**  
+Arts
+
+### 🇫🇷 French Language Learning
+**Henry Harvin Education**  
+2026 – 2028 · Pursuing
+
+---
+
+# 🏆 Certifications & Learning
+
+| Certification / Course | Provider |
+|---|---|
+| Australia Data Analytics Job Simulation | Deloitte |
+| Advance Spoken English | Simplilearn |
+| Spoken English Certification | Great Learning |
+| n8n Automation — No-Code AI Builder | Simplilearn |
+| Prompt Engineering | IBM |
+| Python 101 for Data Science | IBM |
+| Time Management | LearnTube.AI |
+| Generative AI | Tutedude |
+| DaVinci Resolve | Tutedude |
+| UI/UX Designing | Tutedude |
+| Machine Learning Engineering | Udemy |
+| GenAI Developer | Udemy |
+| Japanese Language | Udemy |
+
+---
+
+# 🌍 Languages
+
+| Language | Proficiency |
+|---|---|
+| 🇮🇳 Bengali | Native |
+| 🇬🇧 English | Professional |
+| 🇮🇳 Hindi | Professional |
+| 🇮🇳 Assamese | Basic |
+| 🇫🇷 French | Elementary |
+| 🇯🇵 Japanese | Elementary |
+
+---
+
+# 📈 Professional Focus
+
+```text
+Generative AI
+      │
+      ▼
+LLMs + Prompt Engineering
+      │
+      ▼
+Machine Learning + NLP
+      │
+      ▼
+AI Automation + API Integration
+      │
+      ▼
+Data Analysis + Business Intelligence
+      │
+      ▼
+Real-World Business Applications
