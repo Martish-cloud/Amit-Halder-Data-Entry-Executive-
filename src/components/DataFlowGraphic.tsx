@@ -33,7 +33,7 @@ export const DataFlowGraphic: React.FC = () => {
     {
       id: 3,
       title: 'Analytics & Reporting',
-      subtitle: 'Excel / Power BI / SQL',
+      subtitle: 'Excel / Power BI',
       icon: BarChart3,
       badge: 'Insight',
       details: 'Management reporting, data extraction, and operational decision support',
@@ -113,7 +113,7 @@ export const DataFlowGraphic: React.FC = () => {
       <div className="mt-6 pt-4 border-t border-[#D8C7AD]/60 grid grid-cols-2 sm:grid-cols-4 gap-3 text-left font-mono">
         <div className="p-2.5 rounded-lg bg-[#F7F3EA] border border-[#D8C7AD]/70">
           <div className="text-[10px] text-[#765C48] uppercase font-semibold">Core Stack</div>
-          <div className="text-xs font-semibold text-[#29261F] mt-0.5">Excel · Power BI · SQL</div>
+          <div className="text-xs font-semibold text-[#29261F] mt-0.5">Excel · Power BI</div>
         </div>
         <div className="p-2.5 rounded-lg bg-[#F7F3EA] border border-[#D8C7AD]/70">
           <div className="text-[10px] text-[#765C48] uppercase font-semibold">System Scope</div>

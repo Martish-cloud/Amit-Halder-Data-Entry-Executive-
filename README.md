@@ -20,7 +20,7 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=20&duration=2800&pause=900&color=68724F&center=true&vCenter=true&width=750&lines=Data+Entry+%26+Data+Processing;ERP+Data+Management;Microsoft+Excel+%7C+Power+BI+%7C+SQL;Inventory+%26+Order+Tracking;Documentation+%26+Reporting;Operations+%26+Production+Data" />
+  <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=20&duration=2800&pause=900&color=68724F&center=true&vCenter=true&width=750&lines=Data+Entry+%26+Data+Processing;ERP+Data+Management;Microsoft+Excel+%7C+Power+BI;Inventory+%26+Order+Tracking;Documentation+%26+Reporting;Operations+%26+Production+Data" />
 </p>
 
 <p align="center">
@@ -76,7 +76,6 @@ I'm **Amit Halder**, a **Data Entry Executive and Operations Professional** expe
 - Production data management
 - Microsoft Excel
 - Power BI
-- SQL
 - Data analysis
 
 My professional experience combines **data management with production and operational workflows**, with a strong focus on accurate information, organized documentation, and reliable operational records.

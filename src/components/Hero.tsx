@@ -117,7 +117,7 @@ export const Hero: React.FC<HeroProps> = ({ onDownloadResume }) => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-sm sm:text-base text-[#6F675D] leading-relaxed max-w-2xl font-normal"
             >
-              Experienced in <span className="text-[#4B382C] font-semibold">data entry, data processing, verification, and validation</span>, alongside continuous <span className="text-[#4B382C] font-semibold">ERP data management</span> and record maintenance. Proven operational background spanning <span className="text-[#4F5A3D] font-semibold">inventory tracking, order processing, dispatch coordination</span>, and analytical report preparation utilizing <span className="text-[#4F5A3D] font-semibold">Microsoft Excel, Power BI, and SQL</span>.
+              Experienced in <span className="text-[#4B382C] font-semibold">data entry, data processing, verification, and validation</span>, alongside continuous <span className="text-[#4B382C] font-semibold">ERP data management</span> and record maintenance. Proven operational background spanning <span className="text-[#4F5A3D] font-semibold">inventory tracking, order processing, dispatch coordination</span>, and analytical report preparation utilizing <span className="text-[#4F5A3D] font-semibold">Microsoft Excel and Power BI</span>.
             </motion.p>
 
             {/* Micro Tags */}
@@ -131,7 +131,7 @@ export const Hero: React.FC<HeroProps> = ({ onDownloadResume }) => {
                 { name: 'Data Verification', icon: CheckCircle2 },
                 { name: 'ERP Systems', icon: Layers },
                 { name: 'Excel & Power BI', icon: BarChart2 },
-                { name: 'SQL Querying', icon: Database },
+                { name: 'Record Maintenance', icon: Database },
               ].map((pill, i) => {
                 const Icon = pill.icon;
                 return (

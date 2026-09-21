@@ -104,7 +104,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
 
             <div className="space-y-2 text-[#6F675D] leading-relaxed text-xs">
               <p>
-                This document reflects all verified professional milestones, including positions at Pioneer Mega Printers, Jay Boxes, and York Print Pvt. Ltd., alongside technical proficiencies in Microsoft Excel, Power BI, SQL, and ERP systems.
+                This document reflects all verified professional milestones, including positions at Pioneer Mega Printers, Jay Boxes, and York Print Pvt. Ltd., alongside technical proficiencies in Microsoft Excel, Power BI, and ERP systems.
               </p>
             </div>
           </div>

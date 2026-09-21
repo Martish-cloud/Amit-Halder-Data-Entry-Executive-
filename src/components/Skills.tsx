@@ -24,7 +24,7 @@ export const Skills: React.FC = () => {
     const s = skillName.toLowerCase();
     if (s.includes('excel')) return FileSpreadsheet;
     if (s.includes('power bi') || s.includes('analytics') || s.includes('reporting')) return BarChart3;
-    if (s.includes('sql') || s.includes('data management') || s.includes('data entry')) return Database;
+    if (s.includes('database') || s.includes('data management') || s.includes('data entry')) return Database;
     if (s.includes('erp') || s.includes('mrp')) return Layers;
     if (s.includes('inventory')) return Package;
     if (s.includes('dispatch') || s.includes('order')) return Truck;
@@ -172,10 +172,10 @@ export const Skills: React.FC = () => {
               </h4>
             </div>
             <p className="text-xs text-[#6F675D] leading-relaxed mb-4">
-              Structured database querying, analytical data extraction, and executive reporting using Microsoft Excel, Power BI, and SQL.
+              Structured analytical data extraction and executive reporting using Microsoft Excel and Power BI.
             </p>
             <div className="text-[11px] font-mono text-[#4F5A3D] font-semibold">
-              6 Verified Analytical Capabilities
+              5 Verified Analytical Capabilities
             </div>
           </div>
 

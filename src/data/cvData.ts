@@ -51,9 +51,9 @@ export const PERSONAL_INFO = {
   linkedin: 'https://www.linkedin.com/in/amit-halder-/',
   linkedinDisplay: 'https://www.linkedin.com/in/amit-halder-/',
   summary:
-    'Detail-oriented Data Entry Executive and Operations Professional experienced in data entry, data processing, data verification, data validation, ERP data management, record maintenance, documentation, inventory tracking, order tracking, dispatch coordination, and report preparation. Skilled in maintaining accurate operational records, updating ERP information, verifying data, organizing documentation, and preparing reports. Proficient in Microsoft Excel, ERP systems, Power BI, SQL, and data analysis, with a strong focus on data accuracy, attention to detail, organization, and meeting deadlines.',
+    'Detail-oriented Data Entry Executive and Operations Professional experienced in data entry, data processing, data verification, data validation, ERP data management, record maintenance, documentation, inventory tracking, order tracking, dispatch coordination, and report preparation. Skilled in maintaining accurate operational records, updating ERP information, verifying data, organizing documentation, and preparing reports. Proficient in Microsoft Excel, ERP systems, Power BI, and data analysis, with a strong focus on data accuracy, attention to detail, organization, and meeting deadlines.',
   supportingStatement:
-    'Specialized in high-precision data processing, ERP management, operational record keeping, inventory/dispatch tracking, and analytical reporting with Microsoft Excel, Power BI, and SQL.',
+    'Specialized in high-precision data processing, ERP management, operational record keeping, inventory/dispatch tracking, and analytical reporting with Microsoft Excel and Power BI.',
   resumeFileName: 'Amit_Halder (Data Entry Executive).pdf',
   resumeUrl: `${import.meta.env.BASE_URL}Amit_Halder%20(Data%20Entry%20Executive).pdf`,
 } as const;
@@ -103,11 +103,11 @@ export const OPERATIONAL_PILLARS: OperationalPillar[] = [
     title: 'Analytics & Reporting',
     tagline: 'Actionable operational business intelligence',
     description:
-      'Transforming operational logs into structured management reports using Microsoft Excel, Power BI, SQL, and analytical methodologies.',
+      'Transforming operational logs into structured management reports using Microsoft Excel, Power BI, and analytical methodologies.',
     metricsLabel: 'Actionable Intelligence',
     highlights: [
       'Microsoft Excel & Power BI reporting',
-      'SQL database querying & cleaning',
+      'Operational data extraction & cleaning',
       'Management report preparation',
     ],
   },
@@ -191,11 +191,10 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   {
     id: 'analytics-tools',
     title: 'Analytics & Business Tools',
-    description: 'Technical proficiencies for structured querying, analytical modelling, and stakeholder reporting.',
+    description: 'Technical proficiencies for analytical modelling, data analysis, and stakeholder reporting.',
     skills: [
       'Microsoft Excel',
       'Power BI',
-      'SQL',
       'Data Analysis',
       'Report Preparation',
       'Reporting',
@@ -228,7 +227,6 @@ export const ALL_TECHNICAL_SKILLS = [
   { name: 'Production Data Management', category: 'Data & Operations', primary: true },
   { name: 'MRP & Production Planning', category: 'ERP & Planning', primary: true },
   { name: 'Power BI', category: 'Analytics & Business Tools', primary: true },
-  { name: 'SQL', category: 'Analytics & Business Tools', primary: true },
   { name: 'Data Analysis', category: 'Analytics & Business Tools', primary: true },
   { name: 'ERP Systems', category: 'ERP & Planning', primary: true },
   { name: 'Data Entry', category: 'Data & Operations', primary: false },
