@@ -48,8 +48,8 @@ export const PERSONAL_INFO = {
   phone: '(+91) 7003660883',
   phoneClean: '+917003660883',
   email: 'askfor.amithalder@gmail.com',
-  linkedin: 'https://linkedin.com/in/amit-halder',
-  linkedinDisplay: 'linkedin.com/in/amit-halder',
+  linkedin: 'https://www.linkedin.com/in/amit-halder-/',
+  linkedinDisplay: 'linkedin.com/in/amit-halder-',
   summary:
     'Detail-oriented Data Entry Executive and Operations Professional experienced in data entry, data processing, data verification, data validation, ERP data management, record maintenance, documentation, inventory tracking, order tracking, dispatch coordination, and report preparation. Skilled in maintaining accurate operational records, updating ERP information, verifying data, organizing documentation, and preparing reports. Proficient in Microsoft Excel, ERP systems, Power BI, SQL, and data analysis, with a strong focus on data accuracy, attention to detail, organization, and meeting deadlines.',
   supportingStatement:

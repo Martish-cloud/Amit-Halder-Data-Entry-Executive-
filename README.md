@@ -11,7 +11,7 @@
   <a href="https://github.com/Martish-cloud/Amit-Halder-Data-Entry-Executive-">
     <img src="https://img.shields.io/badge/Portfolio-GitHub-111827?style=for-the-badge&logo=github&logoColor=white" />
   </a>
-  <a href="https://www.linkedin.com/in/amit-halder">
+  <a href="https://www.linkedin.com/in/amit-halder-/">
     <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
   <a href="mailto:askfor.amithalder@gmail.com">
