@@ -1,18 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
   <defs>
-    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0284c7" />
-      <stop offset="50%" stop-color="#0ea5e9" />
-      <stop offset="100%" stop-color="#14b8a6" />
-    </linearGradient>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0b1120" />
-      <stop offset="100%" stop-color="#030712" />
+    <linearGradient id="oliveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F5A3D" />
+      <stop offset="100%" stop-color="#68724F" />
     </linearGradient>
   </defs>
-  <rect width="64" height="64" rx="16" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="2"/>
-  <path d="M18 46 L28 18 L38 46 M22 36 L34 36" stroke="url(#grad)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-  <path d="M40 18 L40 46 M40 32 L50 32 M50 18 L50 46" stroke="#f8fafc" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-  <circle cx="28" cy="18" r="2.5" fill="#38bdf8" />
-  <circle cx="50" cy="18" r="2.5" fill="#2dd4bf" />
+  <rect width="64" height="64" rx="16" fill="#F7F3EA" stroke="#D8C7AD" stroke-width="2"/>
+  <path d="M18 46 L28 18 L38 46 M22 36 L34 36" stroke="url(#oliveGrad)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M40 18 L40 46 M40 32 L50 32 M50 18 L50 46" stroke="#4B382C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle cx="28" cy="18" r="2.5" fill="#A8B5A2" />
+  <circle cx="50" cy="18" r="2.5" fill="#68724F" />
 </svg>

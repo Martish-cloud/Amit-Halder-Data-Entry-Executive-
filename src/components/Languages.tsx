@@ -9,45 +9,41 @@ export const Languages: React.FC = () => {
     switch (proficiency) {
       case 'Native':
         return {
-          badge: 'bg-emerald-500/10 border-emerald-500/30 text-emerald-300',
-          bar: 'from-emerald-400 to-teal-400',
+          badge: 'bg-[#68724F]/20 border-[#68724F]/40 text-[#4F5A3D] font-semibold',
           dots: 4,
         };
       case 'Professional':
         return {
-          badge: 'bg-cyan-500/10 border-cyan-500/30 text-cyan-300',
-          bar: 'from-cyan-400 to-sky-400',
+          badge: 'bg-[#A8B5A2]/30 border-[#68724F]/35 text-[#4F5A3D] font-semibold',
           dots: 3,
         };
       case 'Basic':
         return {
-          badge: 'bg-sky-500/10 border-sky-500/30 text-sky-300',
-          bar: 'from-sky-400 to-indigo-400',
+          badge: 'bg-[#E6D8C3] border-[#D8C7AD] text-[#765C48] font-medium',
           dots: 2,
         };
       case 'Elementary':
       default:
         return {
-          badge: 'bg-slate-800 border-slate-700 text-slate-300',
-          bar: 'from-slate-400 to-slate-500',
+          badge: 'bg-[#F2EBDD] border-[#D8C7AD] text-[#765C48] font-medium',
           dots: 1,
         };
     }
   };
 
   return (
-    <section id="languages" className="py-20 md:py-28 relative bg-slate-950/60 border-t border-slate-900">
+    <section id="languages" className="py-20 md:py-28 relative bg-[#F2EBDD] border-t border-[#D8C7AD]/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-800/50 text-cyan-300 text-xs font-mono">
-            <Globe2 className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#A8B5A2]/25 border border-[#68724F]/30 text-[#4F5A3D] text-xs font-mono font-medium">
+            <Globe2 className="w-3.5 h-3.5 text-[#68724F]" />
             <span>Multilingual Communication</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#4B382C] tracking-tight">
             Language Proficiencies
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
+          <p className="text-[#6F675D] text-sm sm:text-base leading-relaxed">
             Proficiency levels recorded directly from the CV for operational and cross-regional communication.
           </p>
         </div>
@@ -64,15 +60,15 @@ export const Languages: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.08 }}
-                className="glass-panel p-5 rounded-2xl border border-slate-800/80 hover:border-cyan-500/40 hover:bg-slate-900/60 transition-all flex flex-col justify-between group"
+                className="bg-[#FFFFFF] p-5 rounded-2xl border border-[#D8C7AD] hover:border-[#68724F]/50 transition-all flex flex-col justify-between group shadow-xs hover:shadow-md"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
                     <div className="flex items-center gap-2.5">
-                      <div className="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-cyan-400 group-hover:border-cyan-500/30 transition-colors">
+                      <div className="w-9 h-9 rounded-lg bg-[#F2EBDD] border border-[#D8C7AD] flex items-center justify-center text-[#4F5A3D] group-hover:border-[#68724F]/40 transition-colors">
                         <MessageSquare className="w-4 h-4" />
                       </div>
-                      <h3 className="text-base font-bold text-white group-hover:text-cyan-300 transition-colors">
+                      <h3 className="text-base font-bold text-[#29261F] group-hover:text-[#4F5A3D] transition-colors">
                         {lang.name}
                       </h3>
                     </div>
@@ -82,20 +78,20 @@ export const Languages: React.FC = () => {
                     </span>
                   </div>
 
-                  <p className="text-xs text-slate-400 mb-4">
+                  <p className="text-xs text-[#6F675D] mb-4">
                     {lang.badge}
                   </p>
                 </div>
 
                 {/* Visual Proficiency Meter */}
-                <div className="pt-3 border-t border-slate-800/60 flex items-center justify-between font-mono text-[11px] text-slate-400">
+                <div className="pt-3 border-t border-[#D8C7AD]/60 flex items-center justify-between font-mono text-[11px] text-[#765C48]">
                   <span>Fluency Rating</span>
                   <div className="flex items-center gap-1.5">
                     {[1, 2, 3, 4].map((step) => (
                       <div
                         key={step}
                         className={`w-2.5 h-2.5 rounded-sm transition-colors ${
-                          step <= style.dots ? 'bg-cyan-400' : 'bg-slate-800'
+                          step <= style.dots ? 'bg-[#4F5A3D]' : 'bg-[#D8C7AD]/60'
                         }`}
                       />
                     ))}

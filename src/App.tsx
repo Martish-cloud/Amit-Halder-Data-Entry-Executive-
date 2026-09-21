@@ -16,7 +16,7 @@ export function App() {
   const [resumeModalOpen, setResumeModalOpen] = useState(false);
 
   return (
-    <div className="relative min-h-screen bg-[#07090e] text-slate-100 selection:bg-cyan-500/30 selection:text-white">
+    <div className="relative min-h-screen bg-[#F7F3EA] text-[#29261F] selection:bg-[#A8B5A2]/40 selection:text-[#29261F]">
       {/* Subtle Desktop Interactive Cursor */}
       <CustomCursor />
 

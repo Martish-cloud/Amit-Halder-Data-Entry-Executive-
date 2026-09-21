@@ -63,14 +63,14 @@ export const CustomCursor: React.FC = () => {
     <>
       {/* Outer ring */}
       <motion.div
-        className="fixed top-0 left-0 pointer-events-none z-50 rounded-full border border-sky-400/40 mix-blend-screen"
+        className="fixed top-0 left-0 pointer-events-none z-50 rounded-full border border-[#68724F]/40"
         animate={{
           x: mousePosition.x - (isHovered ? 24 : 16),
           y: mousePosition.y - (isHovered ? 24 : 16),
           width: isHovered ? 48 : 32,
           height: isHovered ? 48 : 32,
-          backgroundColor: isHovered ? 'rgba(14, 165, 233, 0.12)' : 'rgba(14, 165, 233, 0.03)',
-          borderColor: isHovered ? 'rgba(56, 189, 248, 0.7)' : 'rgba(56, 189, 248, 0.35)',
+          backgroundColor: isHovered ? 'rgba(168, 181, 162, 0.22)' : 'rgba(168, 181, 162, 0.08)',
+          borderColor: isHovered ? 'rgba(79, 90, 61, 0.8)' : 'rgba(104, 114, 79, 0.45)',
         }}
         transition={{
           type: 'spring',
@@ -81,7 +81,7 @@ export const CustomCursor: React.FC = () => {
       />
       {/* Inner dot */}
       <motion.div
-        className="fixed top-0 left-0 pointer-events-none z-50 rounded-full bg-cyan-400"
+        className="fixed top-0 left-0 pointer-events-none z-50 rounded-full bg-[#4F5A3D]"
         animate={{
           x: mousePosition.x - 3,
           y: mousePosition.y - 3,
