@@ -55,7 +55,7 @@ export const PERSONAL_INFO = {
   supportingStatement:
     'Specialized in high-precision data processing, ERP management, operational record keeping, inventory/dispatch tracking, and analytical reporting with Microsoft Excel, Power BI, and SQL.',
   resumeFileName: 'Amit_Halder (Data Entry Executive).pdf',
-  resumeUrl: './Amit_Halder%20(Data%20Entry%20Executive).pdf',
+  resumeUrl: `${import.meta.env.BASE_URL}Amit_Halder%20(Data%20Entry%20Executive).pdf`,
 } as const;
 
 export const OPERATIONAL_PILLARS: OperationalPillar[] = [
