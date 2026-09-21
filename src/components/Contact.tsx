@@ -272,7 +272,7 @@ export const Contact: React.FC = () => {
                 </div>
                 <ExternalLink className="w-4 h-4 text-[#765C48] group-hover:text-[#4F5A3D] transition-colors" />
               </div>
-              <div className="text-xs font-mono text-[#4F5A3D] font-medium mt-3 flex items-center gap-1">
+              <div className="text-xs font-mono text-[#4F5A3D] font-medium mt-3 flex items-center gap-1 break-all">
                 <span>{PERSONAL_INFO.linkedinDisplay}</span>
               </div>
             </a>
