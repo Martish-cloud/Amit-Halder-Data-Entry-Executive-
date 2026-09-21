@@ -364,7 +364,7 @@ export const Contact: React.FC = () => {
                     disabled={status === 'submitting'}
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="e.g. John Doe / Hiring Manager"
+                    placeholder="e.g. Ayushi Verma / Hiring Manager"
                     className={`w-full px-3.5 py-2.5 text-xs bg-[#F7F3EA] border rounded-xl text-[#29261F] placeholder-[#765C48]/60 focus:outline-none transition-colors shadow-xs ${
                       errors.name ? 'border-[#C25450] focus:border-[#C25450]' : 'border-[#D8C7AD] focus:border-[#68724F]'
                     }`}

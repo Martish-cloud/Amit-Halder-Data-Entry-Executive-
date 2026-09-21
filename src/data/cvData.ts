@@ -54,8 +54,8 @@ export const PERSONAL_INFO = {
     'Detail-oriented Data Entry Executive and Operations Professional experienced in data entry, data processing, data verification, data validation, ERP data management, record maintenance, documentation, inventory tracking, order tracking, dispatch coordination, and report preparation. Skilled in maintaining accurate operational records, updating ERP information, verifying data, organizing documentation, and preparing reports. Proficient in Microsoft Excel, ERP systems, Power BI, SQL, and data analysis, with a strong focus on data accuracy, attention to detail, organization, and meeting deadlines.',
   supportingStatement:
     'Specialized in high-precision data processing, ERP management, operational record keeping, inventory/dispatch tracking, and analytical reporting with Microsoft Excel, Power BI, and SQL.',
-  resumeFileName: 'Amit_Halder_Resume.pdf',
-  resumeUrl: '/Amit_Halder_Resume.pdf',
+  resumeFileName: 'Amit_Halder (Data Entry Executive).pdf',
+  resumeUrl: './Amit_Halder%20(Data%20Entry%20Executive).pdf',
 } as const;
 
 export const OPERATIONAL_PILLARS: OperationalPillar[] = [

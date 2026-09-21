@@ -216,7 +216,7 @@ The contact system uses FormSubmit's AJAX endpoint (`POST https://formsubmit.co/
    - Verified LinkedIn profile link
 
 9. **Resume Asset**:
-   - Downloadable official CV document (`Amit_Halder_Resume.pdf`) in `public/` directory
+   - Downloadable official CV document (`Amit_Halder (Data Entry Executive).pdf`) in `public/` directory
    - Modal preview with print / download actions
 
 ---
