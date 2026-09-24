@@ -181,7 +181,7 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-28 relative bg-[#C9B89E] border-t border-[#765C48]/30">
+    <section id="contact" className="py-20 md:py-28 relative bg-[#C9B89E]/85 backdrop-blur-xs border-t border-[#765C48]/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">

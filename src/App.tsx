@@ -17,6 +17,25 @@ export function App() {
 
   return (
     <div className="relative min-h-screen bg-[#EAE2D2] text-[#29261F] selection:bg-[#A8B5A2]/40 selection:text-[#29261F]">
+      {/* ========================================================================= */}
+      {/* SEPARATE BACKGROUND LAYER (Strictly 20% Opacity Effect Across Entire Website) */}
+      {/* Sits behind content, non-blocking, pointer-events: none, content remains 100% */}
+      {/* ========================================================================= */}
+      <div
+        className="website-bg-layer select-none overflow-hidden"
+        style={{ opacity: 0.20 }}
+        aria-hidden="true"
+      >
+        {/* Subtle warm geometric grid & dot patterns */}
+        <div className="absolute inset-0 bg-grid-warm bg-dots-warm" />
+
+        {/* Ambient atmospheric warm accents */}
+        <div className="absolute -top-32 -left-32 w-[600px] h-[600px] rounded-full bg-[#A8B5A2] blur-3xl transform-gpu" />
+        <div className="absolute top-1/3 -right-32 w-[500px] h-[500px] rounded-full bg-[#68724F] blur-3xl transform-gpu" />
+        <div className="absolute bottom-1/3 -left-32 w-[550px] h-[550px] rounded-full bg-[#D5C7AF] blur-3xl transform-gpu" />
+        <div className="absolute -bottom-32 right-1/4 w-[600px] h-[600px] rounded-full bg-[#4F5A3D] blur-3xl transform-gpu" />
+      </div>
+
       {/* Subtle Desktop Interactive Cursor */}
       <CustomCursor />
 
