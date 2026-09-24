@@ -66,11 +66,8 @@ export const Hero: React.FC<HeroProps> = ({ onDownloadResume }) => {
   return (
     <section
       id="home"
-      className="relative min-h-screen pt-28 pb-16 md:pt-36 md:pb-24 flex flex-col justify-center overflow-hidden bg-[#F7F3EA]/70 backdrop-blur-xs bg-grid-warm"
+      className="relative min-h-screen pt-28 pb-16 md:pt-36 md:pb-24 flex flex-col justify-center overflow-hidden bg-transparent"
     >
-      {/* Subtle warm ambient lighting */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[380px] bg-gradient-to-tr from-[#A8B5A2]/20 via-[#E6D8C3]/30 to-transparent blur-[110px] pointer-events-none -z-10" />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           {/* Left Column: Typography & CTAs */}
