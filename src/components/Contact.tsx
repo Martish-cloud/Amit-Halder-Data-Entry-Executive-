@@ -13,6 +13,7 @@ import {
   AlertCircle,
   CheckCircle2,
   RotateCcw,
+  ChevronDown,
 } from 'lucide-react';
 import { LinkedInIcon } from './icons/LinkedInIcon';
 import { PERSONAL_INFO } from '../data/cvData';
@@ -21,6 +22,7 @@ interface FormState {
   name: string;
   email: string;
   subject: string;
+  budget: string;
   message: string;
 }
 
@@ -28,6 +30,7 @@ interface FormErrors {
   name?: string;
   email?: string;
   subject?: string;
+  budget?: string;
   message?: string;
 }
 
@@ -42,6 +45,7 @@ export const Contact: React.FC = () => {
     name: '',
     email: '',
     subject: '',
+    budget: '',
     message: '',
   });
 
@@ -63,6 +67,16 @@ export const Contact: React.FC = () => {
     setTimeout(() => setCopiedPhone(false), 2500);
   };
 
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    if (errors[name as keyof FormErrors]) {
+      setErrors((prev) => ({ ...prev, [name]: undefined }));
+    }
+  };
+
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
 
@@ -77,7 +91,11 @@ export const Contact: React.FC = () => {
     }
 
     if (!formData.subject.trim()) {
-      newErrors.subject = 'Please enter a subject.';
+      newErrors.subject = 'Please enter a subject / role title.';
+    }
+
+    if (!formData.budget.trim()) {
+      newErrors.budget = 'Please select a budget / salary range.';
     }
 
     if (!formData.message.trim()) {
@@ -103,12 +121,15 @@ export const Contact: React.FC = () => {
         name: formData.name.trim(),
         email: formData.email.trim(),
         subject: formData.subject.trim(),
+        'Budget / Salary Range': formData.budget.trim(),
+        budget: formData.budget.trim(),
         message: formData.message.trim(),
-        _subject: 'New Portfolio Inquiry — Amit Halder',
+        _subject: 'New Portfolio Inquiry — Data Entry / Operations',
         _replyto: formData.email.trim(),
         _template: 'table',
         _url: typeof window !== 'undefined' ? window.location.href : '',
         _captcha: 'false',
+        _honey: '',
       };
 
       const response = await fetch('https://formsubmit.co/ajax/askfor.amithalder@gmail.com', {
@@ -128,6 +149,7 @@ export const Contact: React.FC = () => {
           name: '',
           email: '',
           subject: '',
+          budget: '',
           message: '',
         });
         setErrors({});
@@ -143,16 +165,8 @@ export const Contact: React.FC = () => {
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-    if (errors[name as keyof FormErrors]) {
-      setErrors((prev) => ({ ...prev, [name]: undefined }));
-    }
-  };
-
   return (
-    <section id="contact" className="py-20 md:py-28 relative bg-[#D8C7AD] border-t border-[#765C48]/20">
+    <section id="contact" className="py-20 md:py-28 relative bg-[#D8C7AD]/85 backdrop-blur-sm border-t border-[#765C48]/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
@@ -318,10 +332,10 @@ export const Contact: React.FC = () => {
                 <CheckCircle2 className="w-5 h-5 text-[#4F5A3D] flex-shrink-0 mt-0.5" />
                 <div>
                   <h4 className="text-sm font-bold text-[#29261F]">
-                    Thank you! Your inquiry has been sent successfully.
+                    Your inquiry has been sent successfully. Amit will get back to you soon.
                   </h4>
                   <p className="text-xs text-[#4F5A3D] mt-1 leading-relaxed">
-                    I'll review your message and get back to you as soon as possible.
+                    Thank you for reaching out. I'll review your message and reply promptly.
                   </p>
                 </div>
               </div>
@@ -350,6 +364,9 @@ export const Contact: React.FC = () => {
             )}
 
             <form onSubmit={handleSubmit} noValidate className="space-y-4 text-left">
+              {/* Anti-spam honeypot */}
+              <input type="text" name="_honey" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
+
               {/* Name and Email Inputs */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
@@ -417,6 +434,40 @@ export const Contact: React.FC = () => {
                 />
                 {errors.subject && (
                   <p className="text-[11px] text-[#A33E3B] font-mono mt-1">{errors.subject}</p>
+                )}
+              </div>
+
+              {/* Budget / Salary Range Select */}
+              <div>
+                <label htmlFor="budget" className="block text-xs font-mono text-[#4B382C] font-medium mb-1.5">
+                  Budget / Salary Range <span className="text-[#A33E3B]">*</span>
+                </label>
+                <div className="relative">
+                  <select
+                    id="budget"
+                    name="budget"
+                    required
+                    disabled={status === 'submitting'}
+                    value={formData.budget}
+                    onChange={handleChange}
+                    className={`w-full px-3.5 py-2.5 text-xs bg-[#F7F3EA] border rounded-xl appearance-none text-[#29261F] focus:outline-none transition-colors shadow-xs pr-10 cursor-pointer ${
+                      errors.budget ? 'border-[#C25450] focus:border-[#C25450]' : 'border-[#D8C7AD] focus:border-[#68724F]'
+                    } ${!formData.budget ? 'text-[#765C48]/70' : 'text-[#29261F]'}`}
+                  >
+                    <option value="" disabled>
+                      Select Budget / Salary Range
+                    </option>
+                    <option value="₹15,000 – ₹25,000">₹15,000 – ₹25,000</option>
+                    <option value="₹25,000 – ₹30,000">₹25,000 – ₹30,000</option>
+                    <option value="₹30,000 – ₹45,000">₹30,000 – ₹45,000</option>
+                    <option value="₹45,000+">₹45,000+</option>
+                  </select>
+                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3 text-[#765C48]">
+                    <ChevronDown className="w-4 h-4" />
+                  </div>
+                </div>
+                {errors.budget && (
+                  <p className="text-[11px] text-[#A33E3B] font-mono mt-1">{errors.budget}</p>
                 )}
               </div>
 

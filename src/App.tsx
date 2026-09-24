@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { CustomCursor } from './components/CustomCursor';
 import { ScrollProgress } from './components/ScrollProgress';
+import { BackgroundVideo } from './components/BackgroundVideo';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
@@ -16,7 +17,10 @@ export function App() {
   const [resumeModalOpen, setResumeModalOpen] = useState(false);
 
   return (
-    <div className="relative min-h-screen bg-[#F7F3EA] text-[#29261F] selection:bg-[#A8B5A2]/40 selection:text-[#29261F]">
+    <div className="relative min-h-screen text-[#29261F] selection:bg-[#A8B5A2]/40 selection:text-[#29261F]">
+      {/* Global Cinematic Background Video Layer (Fixed to viewport, non-blocking) */}
+      <BackgroundVideo />
+
       {/* Subtle Desktop Interactive Cursor */}
       <CustomCursor />
 
@@ -26,8 +30,8 @@ export function App() {
       {/* Floating Sticky Navigation Bar */}
       <Navbar onDownloadResume={() => setResumeModalOpen(true)} />
 
-      {/* Main Content Sections */}
-      <main>
+      {/* Main Content Sections (Layered safely above background video) */}
+      <main className="relative z-10">
         <Hero onDownloadResume={() => setResumeModalOpen(true)} />
         <About />
         <Experience />
@@ -38,7 +42,9 @@ export function App() {
       </main>
 
       {/* Minimal Premium Footer */}
-      <Footer />
+      <div className="relative z-10">
+        <Footer />
+      </div>
 
       {/* Resume Download / Preview Modal */}
       <ResumeModal

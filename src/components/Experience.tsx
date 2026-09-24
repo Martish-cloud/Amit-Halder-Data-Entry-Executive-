@@ -28,7 +28,7 @@ export const Experience: React.FC = () => {
   };
 
   return (
-    <section id="experience" className="py-20 md:py-28 relative bg-[#F7F3EA] border-t border-[#D8C7AD]/60">
+    <section id="experience" className="py-20 md:py-28 relative bg-[#F7F3EA]/80 backdrop-blur-sm border-t border-[#D8C7AD]/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
