@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/cvData';
 import { DataFlowGraphic } from './DataFlowGraphic';
+import { BackgroundVideo } from './BackgroundVideo';
 import confetti from 'canvas-confetti';
 
 interface HeroProps {
@@ -66,9 +67,12 @@ export const Hero: React.FC<HeroProps> = ({ onDownloadResume }) => {
   return (
     <section
       id="home"
-      className="relative min-h-screen pt-28 pb-16 md:pt-36 md:pb-24 flex flex-col justify-center overflow-hidden bg-transparent"
+      className="relative min-h-screen pt-28 pb-16 md:pt-36 md:pb-24 flex flex-col justify-center overflow-hidden bg-[#EAE2D2]"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      {/* Background Video strictly scoped to Hero section where Amit Halder is shown */}
+      <BackgroundVideo />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           {/* Left Column: Typography & CTAs */}
           <div className="lg:col-span-7 text-left space-y-6">
@@ -77,7 +81,7 @@ export const Hero: React.FC<HeroProps> = ({ onDownloadResume }) => {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F2EBDD] border border-[#D8C7AD] shadow-sm"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1D7C4]/90 backdrop-blur-md border border-[#C9B89E] shadow-sm"
             >
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#68724F] opacity-75" />
@@ -86,7 +90,7 @@ export const Hero: React.FC<HeroProps> = ({ onDownloadResume }) => {
               <span className="font-mono text-xs text-[#4B382C] font-medium">
                 Kolkata, West Bengal, India
               </span>
-              <span className="text-[#D8C7AD]">|</span>
+              <span className="text-[#C9B89E]">|</span>
               <span className="text-xs text-[#4F5A3D] font-semibold">Available for Data & Operations Roles</span>
             </motion.div>
 
@@ -134,7 +138,7 @@ export const Hero: React.FC<HeroProps> = ({ onDownloadResume }) => {
                 return (
                   <div
                     key={i}
-                    className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#F2EBDD] border border-[#D8C7AD] text-xs text-[#4B382C] font-mono shadow-xs"
+                    className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#E1D7C4]/90 backdrop-blur-xs border border-[#C9B89E] text-xs text-[#4B382C] font-mono shadow-xs"
                   >
                     <Icon className="w-3.5 h-3.5 text-[#68724F]" />
                     <span>{pill.name}</span>
@@ -152,15 +156,15 @@ export const Hero: React.FC<HeroProps> = ({ onDownloadResume }) => {
             >
               <button
                 onClick={() => scrollTo('experience')}
-                className="group flex items-center gap-2 px-5 py-3 rounded-xl bg-[#4F5A3D] hover:bg-[#68724F] text-[#F7F3EA] font-semibold text-sm shadow-md shadow-[#4B382C]/10 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4F5A3D]"
+                className="group flex items-center gap-2 px-5 py-3 rounded-xl bg-[#4F5A3D] hover:bg-[#68724F] text-[#FFFFFF] font-semibold text-sm shadow-md shadow-[#4B382C]/15 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4F5A3D]"
               >
-                <Briefcase className="w-4 h-4 text-[#F7F3EA] group-hover:rotate-6 transition-transform" />
+                <Briefcase className="w-4 h-4 text-[#FFFFFF] group-hover:rotate-6 transition-transform" />
                 <span>View My Experience</span>
               </button>
 
               <button
                 onClick={() => scrollTo('skills')}
-                className="group flex items-center gap-2 px-5 py-3 rounded-xl bg-[#FFFFFF] hover:bg-[#E6D8C3] text-[#4B382C] font-medium text-sm border border-[#765C48]/35 shadow-xs transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4F5A3D]"
+                className="group flex items-center gap-2 px-5 py-3 rounded-xl bg-[#FFFFFF] hover:bg-[#D5C7AF] text-[#4B382C] font-medium text-sm border border-[#765C48]/35 shadow-xs transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4F5A3D]"
               >
                 <Sparkles className="w-4 h-4 text-[#68724F] group-hover:scale-110 transition-transform" />
                 <span>Explore Skills</span>
@@ -171,7 +175,7 @@ export const Hero: React.FC<HeroProps> = ({ onDownloadResume }) => {
                 className={`group flex items-center gap-2 px-5 py-3 rounded-xl font-medium text-sm border transition-all shadow-xs focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4F5A3D] ${
                   downloaded
                     ? 'bg-[#A8B5A2]/30 border-[#68724F] text-[#4F5A3D]'
-                    : 'bg-[#F2EBDD] hover:bg-[#E6D8C3] text-[#4B382C] border-[#765C48]/30'
+                    : 'bg-[#E1D7C4] hover:bg-[#D5C7AF] text-[#4B382C] border-[#765C48]/30'
                 }`}
               >
                 <FileDown className="w-4 h-4 text-[#68724F] group-hover:translate-y-0.5 transition-transform" />

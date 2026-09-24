@@ -28,25 +28,25 @@ export const Experience: React.FC = () => {
   };
 
   return (
-    <section id="experience" className="py-20 md:py-28 relative bg-transparent border-t border-[#D8C7AD]/40">
+    <section id="experience" className="py-20 md:py-28 relative bg-[#EAE2D2] border-t border-[#C9B89E]/70">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F2EBDD]/90 backdrop-blur-md border border-[#68724F]/35 text-[#4F5A3D] text-xs font-mono font-medium shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1D7C4] border border-[#68724F]/35 text-[#4F5A3D] text-xs font-mono font-medium shadow-xs">
             <Briefcase className="w-3.5 h-3.5 text-[#68724F]" />
             <span>Industrial Track Record</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#4B382C] tracking-tight drop-shadow-xs">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#4B382C] tracking-tight">
             Professional Experience Timeline
           </h2>
-          <p className="text-[#4B382C]/90 text-sm sm:text-base leading-relaxed font-medium">
+          <p className="text-[#665E55] text-sm sm:text-base leading-relaxed font-medium">
             Direct operational responsibilities across production planning, ERP record management, quality checking, and dispatch logistics.
           </p>
         </div>
 
         {/* Timeline Container */}
         <div className="relative max-w-4xl mx-auto">
-          {/* Vertical Glowing Line for Desktop */}
+          {/* Vertical Line for Desktop */}
           <div className="hidden md:block absolute left-8 top-6 bottom-6 w-[2px] bg-gradient-to-b from-[#A8B5A2] via-[#68724F] to-[#4F5A3D] pointer-events-none" />
 
           {/* Experience Cards */}
@@ -64,18 +64,18 @@ export const Experience: React.FC = () => {
                   className="relative md:pl-20 text-left"
                 >
                   {/* Timeline Dot Node for Desktop */}
-                  <div className="hidden md:flex absolute left-6 -translate-x-1/2 top-7 w-6 h-6 rounded-full bg-[#F7F3EA] border-2 border-[#4F5A3D] items-center justify-center shadow-xs z-10">
+                  <div className="hidden md:flex absolute left-6 -translate-x-1/2 top-7 w-6 h-6 rounded-full bg-[#EAE2D2] border-2 border-[#4F5A3D] items-center justify-center shadow-xs z-10">
                     <div className="w-2.5 h-2.5 rounded-full bg-[#68724F]" />
                   </div>
 
                   {/* Main Card */}
-                  <div className="bg-[#FFFFFF] rounded-2xl border border-[#D8C7AD] hover:border-[#68724F]/50 transition-all duration-300 overflow-hidden shadow-xs hover:shadow-md">
+                  <div className="bg-[#FFFFFF] rounded-2xl border border-[#C9B89E] hover:border-[#68724F]/50 transition-all duration-300 overflow-hidden shadow-xs hover:shadow-md">
                     {/* Header Row */}
-                    <div className="p-6 sm:p-7 border-b border-[#D8C7AD]/60 bg-[#F2EBDD]/40">
+                    <div className="p-6 sm:p-7 border-b border-[#C9B89E]/60 bg-[#E1D7C4]/40">
                       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                         <div>
                           <div className="flex flex-wrap items-center gap-2 mb-1.5">
-                            <span className="font-mono text-xs px-2.5 py-0.5 rounded-full bg-[#F2EBDD] border border-[#D8C7AD] text-[#4B382C] font-semibold">
+                            <span className="font-mono text-xs px-2.5 py-0.5 rounded-full bg-[#E1D7C4] border border-[#C9B89E] text-[#4B382C] font-semibold">
                               Role 0{index + 1}
                             </span>
                             {item.isLatest && (
@@ -87,13 +87,13 @@ export const Experience: React.FC = () => {
                           <h3 className="text-lg sm:text-xl font-bold text-[#29261F] tracking-tight">
                             {item.role}
                           </h3>
-                          <div className="flex flex-wrap items-center gap-3 text-xs sm:text-sm text-[#6F675D] mt-1">
+                          <div className="flex flex-wrap items-center gap-3 text-xs sm:text-sm text-[#665E55] mt-1">
                             <span className="font-semibold text-[#4B382C] flex items-center gap-1.5">
                               <Building2 className="w-4 h-4 text-[#68724F]" />
                               {item.company}
                             </span>
                             {item.location && (
-                              <span className="text-[#6F675D] flex items-center gap-1">
+                              <span className="text-[#665E55] flex items-center gap-1">
                                 <MapPin className="w-3.5 h-3.5 text-[#765C48]" />
                                 {item.location}
                               </span>
@@ -102,31 +102,31 @@ export const Experience: React.FC = () => {
                         </div>
 
                         <div className="flex items-center gap-3">
-                          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#F7F3EA] border border-[#D8C7AD] font-mono text-xs text-[#4B382C] font-medium shadow-xs">
+                          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#EAE2D2] border border-[#C9B89E] font-mono text-xs text-[#4B382C] font-medium shadow-xs">
                             <Calendar className="w-3.5 h-3.5 text-[#68724F]" />
                             <span>{item.period}</span>
                           </div>
 
                           <button
                             onClick={() => toggleExpand(item.id)}
-                            className="p-2 rounded-lg bg-[#F7F3EA] hover:bg-[#E6D8C3] border border-[#D8C7AD] text-[#4B382C] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4F5A3D]"
+                            className="p-2 rounded-lg bg-[#EAE2D2] hover:bg-[#D5C7AF] border border-[#C9B89E] text-[#4B382C] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4F5A3D]"
                             aria-label={isExpanded ? 'Collapse responsibilities' : 'Expand responsibilities'}
                           >
                             {isExpanded ? (
                               <ChevronUp className="w-4 h-4 text-[#4F5A3D]" />
                             ) : (
-                              <ChevronDown className="w-4 h-4 text-[#6F675D]" />
+                              <ChevronDown className="w-4 h-4 text-[#665E55]" />
                             )}
                           </button>
                         </div>
                       </div>
 
                       {/* Tag list */}
-                      <div className="flex flex-wrap gap-1.5 mt-4 pt-3 border-t border-[#D8C7AD]/60">
+                      <div className="flex flex-wrap gap-1.5 mt-4 pt-3 border-t border-[#C9B89E]/60">
                         {item.tags.map((tag, tIdx) => (
                           <span
                             key={tIdx}
-                            className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-[#F7F3EA] border border-[#D8C7AD] text-[11px] font-mono text-[#765C48]"
+                            className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-[#EAE2D2] border border-[#C9B89E] text-[11px] font-mono text-[#765C48]"
                           >
                             <Tag className="w-2.5 h-2.5 text-[#68724F]" />
                             {tag}
@@ -150,7 +150,7 @@ export const Experience: React.FC = () => {
                           </div>
                           <ul className="space-y-3">
                             {item.responsibilities.map((resp, rIdx) => (
-                              <li key={rIdx} className="flex items-start gap-3 text-sm text-[#6F675D] leading-relaxed group">
+                              <li key={rIdx} className="flex items-start gap-3 text-sm text-[#665E55] leading-relaxed group">
                                 <div className="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full bg-[#A8B5A2]/25 border border-[#68724F]/30 flex items-center justify-center text-[#4F5A3D]">
                                   <CheckCircle2 className="w-3 h-3 text-[#4F5A3D]" />
                                 </div>

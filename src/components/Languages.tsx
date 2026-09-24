@@ -19,31 +19,31 @@ export const Languages: React.FC = () => {
         };
       case 'Basic':
         return {
-          badge: 'bg-[#E6D8C3] border-[#D8C7AD] text-[#765C48] font-medium',
+          badge: 'bg-[#D5C7AF] border-[#C9B89E] text-[#765C48] font-medium',
           dots: 2,
         };
       case 'Elementary':
       default:
         return {
-          badge: 'bg-[#F2EBDD] border-[#D8C7AD] text-[#765C48] font-medium',
+          badge: 'bg-[#E1D7C4] border-[#C9B89E] text-[#765C48] font-medium',
           dots: 1,
         };
     }
   };
 
   return (
-    <section id="languages" className="py-20 md:py-28 relative bg-transparent border-t border-[#D8C7AD]/40">
+    <section id="languages" className="py-20 md:py-28 relative bg-[#E1D7C4] border-t border-[#C9B89E]/70">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F2EBDD]/90 backdrop-blur-md border border-[#68724F]/35 text-[#4F5A3D] text-xs font-mono font-medium shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EAE2D2] border border-[#68724F]/35 text-[#4F5A3D] text-xs font-mono font-medium shadow-xs">
             <Globe2 className="w-3.5 h-3.5 text-[#68724F]" />
             <span>Multilingual Communication</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#4B382C] tracking-tight drop-shadow-xs">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#4B382C] tracking-tight">
             Language Proficiencies
           </h2>
-          <p className="text-[#4B382C]/90 text-sm sm:text-base leading-relaxed font-medium">
+          <p className="text-[#665E55] text-sm sm:text-base leading-relaxed font-medium">
             Proficiency levels recorded directly from the CV for operational and cross-regional communication.
           </p>
         </div>
@@ -60,12 +60,12 @@ export const Languages: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.08 }}
-                className="bg-[#FFFFFF] p-5 rounded-2xl border border-[#D8C7AD] hover:border-[#68724F]/50 transition-all flex flex-col justify-between group shadow-xs hover:shadow-md"
+                className="bg-[#FFFFFF] p-5 rounded-2xl border border-[#C9B89E] hover:border-[#68724F]/50 transition-all flex flex-col justify-between group shadow-xs hover:shadow-md"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
                     <div className="flex items-center gap-2.5">
-                      <div className="w-9 h-9 rounded-lg bg-[#F2EBDD] border border-[#D8C7AD] flex items-center justify-center text-[#4F5A3D] group-hover:border-[#68724F]/40 transition-colors">
+                      <div className="w-9 h-9 rounded-lg bg-[#E1D7C4] border border-[#C9B89E] flex items-center justify-center text-[#4F5A3D] group-hover:border-[#68724F]/40 transition-colors">
                         <MessageSquare className="w-4 h-4" />
                       </div>
                       <h3 className="text-base font-bold text-[#29261F] group-hover:text-[#4F5A3D] transition-colors">
@@ -78,20 +78,20 @@ export const Languages: React.FC = () => {
                     </span>
                   </div>
 
-                  <p className="text-xs text-[#6F675D] mb-4">
+                  <p className="text-xs text-[#665E55] mb-4">
                     {lang.badge}
                   </p>
                 </div>
 
                 {/* Visual Proficiency Meter */}
-                <div className="pt-3 border-t border-[#D8C7AD]/60 flex items-center justify-between font-mono text-[11px] text-[#765C48]">
+                <div className="pt-3 border-t border-[#C9B89E]/60 flex items-center justify-between font-mono text-[11px] text-[#765C48]">
                   <span>Fluency Rating</span>
                   <div className="flex items-center gap-1.5">
                     {[1, 2, 3, 4].map((step) => (
                       <div
                         key={step}
                         className={`w-2.5 h-2.5 rounded-sm transition-colors ${
-                          step <= style.dots ? 'bg-[#4F5A3D]' : 'bg-[#D8C7AD]/60'
+                          step <= style.dots ? 'bg-[#4F5A3D]' : 'bg-[#C9B89E]/60'
                         }`}
                       />
                     ))}

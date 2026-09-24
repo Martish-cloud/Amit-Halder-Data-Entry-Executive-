@@ -95,7 +95,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onDownloadResume }) => {
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled
-          ? 'py-3 bg-[#F7F3EA]/92 backdrop-blur-md border-b border-[#D8C7AD]/60 shadow-sm shadow-[#4B382C]/5'
+          ? 'py-3 bg-[#EAE2D2]/95 backdrop-blur-md border-b border-[#C9B89E]/60 shadow-sm shadow-[#4B382C]/5'
           : 'py-5 bg-transparent'
       }`}
     >
@@ -110,7 +110,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onDownloadResume }) => {
           >
             <div className="w-9 h-9 rounded-xl bg-[#4F5A3D] p-[1px] flex items-center justify-center shadow-sm shadow-[#4B382C]/10 group-hover:bg-[#68724F] transition-colors">
               <div className="w-full h-full bg-[#4F5A3D] group-hover:bg-[#68724F] rounded-[11px] flex items-center justify-center transition-colors">
-                <span className="font-mono text-xs font-bold text-[#F7F3EA]">
+                <span className="font-mono text-xs font-bold text-[#FFFFFF]">
                   AH
                 </span>
               </div>
@@ -119,7 +119,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onDownloadResume }) => {
               <span className="text-sm font-semibold tracking-tight text-[#29261F] group-hover:text-[#4F5A3D] transition-colors">
                 Amit Halder
               </span>
-              <span className="text-[10px] font-mono text-[#6F675D] flex items-center gap-1">
+              <span className="text-[10px] font-mono text-[#665E55] flex items-center gap-1">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#68724F] animate-pulse" />
                 Operations & Data
               </span>
@@ -127,7 +127,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onDownloadResume }) => {
           </a>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-1 bg-[#F2EBDD]/90 backdrop-blur-md px-3 py-1.5 rounded-full border border-[#D8C7AD]/70 shadow-sm">
+          <nav className="hidden md:flex items-center gap-1 bg-[#E1D7C4]/90 backdrop-blur-md px-3 py-1.5 rounded-full border border-[#C9B89E]/70 shadow-sm">
             {NAV_LINKS.map((link) => {
               const isActive = activeSection === link.href.substring(1);
               return (
@@ -138,7 +138,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onDownloadResume }) => {
                   className={`relative px-3.5 py-1.5 text-xs font-medium rounded-full transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4F5A3D] ${
                     isActive
                       ? 'text-[#4F5A3D] font-semibold'
-                      : 'text-[#6F675D] hover:text-[#29261F] hover:bg-[#E6D8C3]/50'
+                      : 'text-[#665E55] hover:text-[#29261F] hover:bg-[#D5C7AF]/50'
                   }`}
                 >
                   {isActive && (
@@ -161,7 +161,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onDownloadResume }) => {
               className={`flex items-center gap-2 px-3.5 py-1.5 text-xs font-medium rounded-lg border transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4F5A3D] ${
                 downloadSuccess
                   ? 'bg-[#A8B5A2]/30 border-[#68724F] text-[#4F5A3D]'
-                  : 'bg-[#FFFFFF] border-[#D8C7AD] hover:border-[#68724F] text-[#4B382C] hover:text-[#29261F] shadow-sm'
+                  : 'bg-[#FFFFFF] border-[#C9B89E] hover:border-[#68724F] text-[#4B382C] hover:text-[#29261F] shadow-sm'
               }`}
               title="Download Amit Halder's CV"
             >
@@ -181,7 +181,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onDownloadResume }) => {
             <a
               href="#contact"
               onClick={(e) => handleNavClick(e, '#contact')}
-              className="flex items-center gap-2 px-4 py-1.5 text-xs font-semibold rounded-lg bg-[#4F5A3D] hover:bg-[#68724F] text-[#F7F3EA] shadow-sm hover:shadow-md transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4F5A3D]"
+              className="flex items-center gap-2 px-4 py-1.5 text-xs font-semibold rounded-lg bg-[#4F5A3D] hover:bg-[#68724F] text-[#FFFFFF] shadow-sm hover:shadow-md transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4F5A3D]"
             >
               <span>Get in Touch</span>
             </a>
@@ -191,7 +191,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onDownloadResume }) => {
           <div className="flex items-center gap-2 md:hidden">
             <button
               onClick={handleDownload}
-              className="p-2 rounded-lg bg-[#F2EBDD] border border-[#D8C7AD] text-[#4F5A3D] hover:bg-[#E6D8C3] focus:outline-none"
+              className="p-2 rounded-lg bg-[#E1D7C4] border border-[#C9B89E] text-[#4F5A3D] hover:bg-[#D5C7AF] focus:outline-none"
               aria-label="Download CV"
             >
               {downloadSuccess ? (
@@ -202,7 +202,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onDownloadResume }) => {
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg bg-[#F2EBDD] border border-[#D8C7AD] text-[#4B382C] hover:text-[#29261F] hover:bg-[#E6D8C3] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4F5A3D]"
+              className="p-2 rounded-lg bg-[#E1D7C4] border border-[#C9B89E] text-[#4B382C] hover:text-[#29261F] hover:bg-[#D5C7AF] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4F5A3D]"
               aria-label={mobileMenuOpen ? 'Close Menu' : 'Open Menu'}
               aria-expanded={mobileMenuOpen}
             >
@@ -220,7 +220,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onDownloadResume }) => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-            className="md:hidden overflow-hidden border-b border-[#D8C7AD] bg-[#F7F3EA]/98 backdrop-blur-2xl px-4 pt-2 pb-6 shadow-md"
+            className="md:hidden overflow-hidden border-b border-[#C9B89E] bg-[#EAE2D2]/98 backdrop-blur-2xl px-4 pt-2 pb-6 shadow-md"
           >
             <div className="flex flex-col space-y-1.5 pt-2">
               {NAV_LINKS.map((link) => {
@@ -233,7 +233,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onDownloadResume }) => {
                     className={`flex items-center justify-between px-4 py-2.5 rounded-lg text-sm font-medium transition-colors ${
                       isActive
                         ? 'bg-[#A8B5A2]/25 text-[#4F5A3D] border border-[#68724F]/30 font-semibold'
-                        : 'text-[#4B382C] hover:bg-[#F2EBDD] hover:text-[#29261F]'
+                        : 'text-[#4B382C] hover:bg-[#E1D7C4] hover:text-[#29261F]'
                     }`}
                   >
                     <span>{link.label}</span>
@@ -242,10 +242,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onDownloadResume }) => {
                 );
               })}
 
-              <div className="pt-4 mt-2 border-t border-[#D8C7AD] flex flex-col gap-2.5">
+              <div className="pt-4 mt-2 border-t border-[#C9B89E] flex flex-col gap-2.5">
                 <button
                   onClick={handleDownload}
-                  className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium bg-[#FFFFFF] border border-[#D8C7AD] text-[#4B382C] shadow-sm"
+                  className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium bg-[#FFFFFF] border border-[#C9B89E] text-[#4B382C] shadow-sm"
                 >
                   <FileDown className="w-4 h-4 text-[#68724F]" />
                   <span>Download CV (PDF)</span>
@@ -254,7 +254,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onDownloadResume }) => {
                 <a
                   href="#contact"
                   onClick={(e) => handleNavClick(e, '#contact')}
-                  className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold bg-[#4F5A3D] text-[#F7F3EA] shadow-sm"
+                  className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-semibold bg-[#4F5A3D] text-[#FFFFFF] shadow-sm"
                 >
                   <Mail className="w-4 h-4" />
                   <span>Contact Amit Halder</span>

@@ -181,15 +181,15 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-28 relative bg-transparent border-t border-[#D8C7AD]/40">
+    <section id="contact" className="py-20 md:py-28 relative bg-[#C9B89E] border-t border-[#765C48]/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F2EBDD]/90 backdrop-blur-md border border-[#68724F]/35 text-[#4F5A3D] text-xs font-mono font-medium shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1D7C4] border border-[#68724F]/35 text-[#4F5A3D] text-xs font-mono font-medium shadow-xs">
             <Mail className="w-3.5 h-3.5 text-[#68724F]" />
             <span>Connect Directly</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#4B382C] tracking-tight drop-shadow-xs">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#4B382C] tracking-tight">
             Get in Touch with Amit Halder
           </h2>
           <p className="text-[#4B382C]/90 text-sm sm:text-base leading-relaxed font-medium">
@@ -201,10 +201,10 @@ export const Contact: React.FC = () => {
           {/* Left Column: Direct Verified Contact Cards */}
           <div className="lg:col-span-5 space-y-4 text-left">
             {/* Email Card */}
-            <div className="bg-[#FFFFFF] p-5 rounded-2xl border border-[#D8C7AD] hover:border-[#68724F]/50 shadow-xs hover:shadow-md transition-all">
+            <div className="bg-[#FFFFFF] p-5 rounded-2xl border border-[#765C48]/20 hover:border-[#68724F]/50 shadow-xs hover:shadow-md transition-all">
               <div className="flex items-center justify-between mb-2">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-9 h-9 rounded-xl bg-[#F2EBDD] border border-[#D8C7AD] flex items-center justify-center text-[#4F5A3D]">
+                  <div className="w-9 h-9 rounded-xl bg-[#E1D7C4] border border-[#C9B89E] flex items-center justify-center text-[#4F5A3D]">
                     <Mail className="w-4 h-4" />
                   </div>
                   <div>
@@ -215,7 +215,7 @@ export const Contact: React.FC = () => {
 
                 <button
                   onClick={handleCopyEmail}
-                  className="px-2.5 py-1 rounded-lg bg-[#F7F3EA] hover:bg-[#E6D8C3] border border-[#D8C7AD] text-xs font-mono text-[#4F5A3D] flex items-center gap-1.5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4F5A3D]"
+                  className="px-2.5 py-1 rounded-lg bg-[#EAE2D2] hover:bg-[#D5C7AF] border border-[#C9B89E] text-xs font-mono text-[#4F5A3D] flex items-center gap-1.5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4F5A3D]"
                   title="Copy email to clipboard"
                 >
                   {copiedEmail ? (
@@ -241,10 +241,10 @@ export const Contact: React.FC = () => {
             </div>
 
             {/* Phone Card */}
-            <div className="bg-[#FFFFFF] p-5 rounded-2xl border border-[#D8C7AD] hover:border-[#68724F]/50 shadow-xs hover:shadow-md transition-all">
+            <div className="bg-[#FFFFFF] p-5 rounded-2xl border border-[#765C48]/20 hover:border-[#68724F]/50 shadow-xs hover:shadow-md transition-all">
               <div className="flex items-center justify-between mb-2">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-9 h-9 rounded-xl bg-[#F2EBDD] border border-[#D8C7AD] flex items-center justify-center text-[#4F5A3D]">
+                  <div className="w-9 h-9 rounded-xl bg-[#E1D7C4] border border-[#C9B89E] flex items-center justify-center text-[#4F5A3D]">
                     <Phone className="w-4 h-4" />
                   </div>
                   <div>
@@ -255,7 +255,7 @@ export const Contact: React.FC = () => {
 
                 <button
                   onClick={handleCopyPhone}
-                  className="px-2.5 py-1 rounded-lg bg-[#F7F3EA] hover:bg-[#E6D8C3] border border-[#D8C7AD] text-xs font-mono text-[#4F5A3D] flex items-center gap-1.5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4F5A3D]"
+                  className="px-2.5 py-1 rounded-lg bg-[#EAE2D2] hover:bg-[#D5C7AF] border border-[#C9B89E] text-xs font-mono text-[#4F5A3D] flex items-center gap-1.5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4F5A3D]"
                   title="Copy phone to clipboard"
                 >
                   {copiedPhone ? (
@@ -285,11 +285,11 @@ export const Contact: React.FC = () => {
               href={PERSONAL_INFO.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#FFFFFF] p-5 rounded-2xl border border-[#D8C7AD] hover:border-[#68724F]/50 shadow-xs hover:shadow-md transition-all block group"
+              className="bg-[#FFFFFF] p-5 rounded-2xl border border-[#765C48]/20 hover:border-[#68724F]/50 shadow-xs hover:shadow-md transition-all block group"
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-9 h-9 rounded-xl bg-[#F2EBDD] border border-[#D8C7AD] flex items-center justify-center text-[#4F5A3D]">
+                  <div className="w-9 h-9 rounded-xl bg-[#E1D7C4] border border-[#C9B89E] flex items-center justify-center text-[#4F5A3D]">
                     <LinkedInIcon className="w-4 h-4" />
                   </div>
                   <div>
@@ -307,9 +307,9 @@ export const Contact: React.FC = () => {
             </a>
 
             {/* Location Card */}
-            <div className="bg-[#FFFFFF] p-5 rounded-2xl border border-[#D8C7AD] shadow-xs">
+            <div className="bg-[#FFFFFF] p-5 rounded-2xl border border-[#765C48]/20 shadow-xs">
               <div className="flex items-center gap-2.5">
-                <div className="w-9 h-9 rounded-xl bg-[#F2EBDD] border border-[#D8C7AD] flex items-center justify-center text-[#4F5A3D]">
+                <div className="w-9 h-9 rounded-xl bg-[#E1D7C4] border border-[#C9B89E] flex items-center justify-center text-[#4F5A3D]">
                   <MapPin className="w-4 h-4 text-[#68724F]" />
                 </div>
                 <div>
@@ -321,14 +321,14 @@ export const Contact: React.FC = () => {
           </div>
 
           {/* Right Column: Direct FormSubmit Inquiry Form */}
-          <div className="lg:col-span-7 bg-[#FFFFFF] p-6 sm:p-8 rounded-2xl border border-[#D8C7AD] text-left shadow-md">
-            <div className="flex items-center justify-between mb-6 pb-4 border-b border-[#D8C7AD]/70">
+          <div className="lg:col-span-7 bg-[#FFFFFF] p-6 sm:p-8 rounded-2xl border border-[#765C48]/20 text-left shadow-md">
+            <div className="flex items-center justify-between mb-6 pb-4 border-b border-[#C9B89E]/70">
               <div>
                 <h3 className="text-base font-bold text-[#4B382C] flex items-center gap-2">
                   <MessageSquare className="w-4 h-4 text-[#68724F]" />
                   <span>Send an Inquiry</span>
                 </h3>
-                <p className="text-xs text-[#6F675D] mt-0.5">
+                <p className="text-xs text-[#665E55] mt-0.5">
                   Delivered directly to Amit Halder's inbox via secure FormSubmit.
                 </p>
               </div>
@@ -397,8 +397,8 @@ export const Contact: React.FC = () => {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="e.g. Ayushi Verma / Hiring Manager"
-                    className={`w-full px-3.5 py-2.5 text-xs bg-[#F7F3EA] border rounded-xl text-[#29261F] placeholder-[#765C48]/60 focus:outline-none transition-colors shadow-xs ${
-                      errors.name ? 'border-[#C25450] focus:border-[#C25450]' : 'border-[#D8C7AD] focus:border-[#68724F]'
+                    className={`w-full px-3.5 py-2.5 text-xs bg-[#EAE2D2]/50 border rounded-xl text-[#29261F] placeholder-[#765C48]/60 focus:outline-none transition-colors shadow-xs ${
+                      errors.name ? 'border-[#C25450] focus:border-[#C25450]' : 'border-[#C9B89E] focus:border-[#68724F]'
                     }`}
                   />
                   {errors.name && (
@@ -419,8 +419,8 @@ export const Contact: React.FC = () => {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="e.g. recruiter@company.com"
-                    className={`w-full px-3.5 py-2.5 text-xs bg-[#F7F3EA] border rounded-xl text-[#29261F] placeholder-[#765C48]/60 focus:outline-none transition-colors shadow-xs ${
-                      errors.email ? 'border-[#C25450] focus:border-[#C25450]' : 'border-[#D8C7AD] focus:border-[#68724F]'
+                    className={`w-full px-3.5 py-2.5 text-xs bg-[#EAE2D2]/50 border rounded-xl text-[#29261F] placeholder-[#765C48]/60 focus:outline-none transition-colors shadow-xs ${
+                      errors.email ? 'border-[#C25450] focus:border-[#C25450]' : 'border-[#C9B89E] focus:border-[#68724F]'
                     }`}
                   />
                   {errors.email && (
@@ -434,7 +434,7 @@ export const Contact: React.FC = () => {
                 <div>
                   <label htmlFor="contact_number" className="block text-xs font-mono text-[#4B382C] font-medium mb-1.5 flex items-center justify-between">
                     <span>Contact No.</span>
-                    <span className="text-[10px] text-[#6F675D] font-normal">(Optional)</span>
+                    <span className="text-[10px] text-[#665E55] font-normal">(Optional)</span>
                   </label>
                   <input
                     id="contact_number"
@@ -445,8 +445,8 @@ export const Contact: React.FC = () => {
                     value={formData.contact_number}
                     onChange={handleChange}
                     placeholder="e.g. +91 98765 43210"
-                    className={`w-full px-3.5 py-2.5 text-xs bg-[#F7F3EA] border rounded-xl text-[#29261F] placeholder-[#765C48]/60 focus:outline-none transition-colors shadow-xs ${
-                      errors.contact_number ? 'border-[#C25450] focus:border-[#C25450]' : 'border-[#D8C7AD] focus:border-[#68724F]'
+                    className={`w-full px-3.5 py-2.5 text-xs bg-[#EAE2D2]/50 border rounded-xl text-[#29261F] placeholder-[#765C48]/60 focus:outline-none transition-colors shadow-xs ${
+                      errors.contact_number ? 'border-[#C25450] focus:border-[#C25450]' : 'border-[#C9B89E] focus:border-[#68724F]'
                     }`}
                   />
                   {errors.contact_number && (
@@ -467,8 +467,8 @@ export const Contact: React.FC = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     placeholder="e.g. Opportunity: Data Entry & Operations Professional"
-                    className={`w-full px-3.5 py-2.5 text-xs bg-[#F7F3EA] border rounded-xl text-[#29261F] placeholder-[#765C48]/60 focus:outline-none transition-colors shadow-xs ${
-                      errors.subject ? 'border-[#C25450] focus:border-[#C25450]' : 'border-[#D8C7AD] focus:border-[#68724F]'
+                    className={`w-full px-3.5 py-2.5 text-xs bg-[#EAE2D2]/50 border rounded-xl text-[#29261F] placeholder-[#765C48]/60 focus:outline-none transition-colors shadow-xs ${
+                      errors.subject ? 'border-[#C25450] focus:border-[#C25450]' : 'border-[#C9B89E] focus:border-[#68724F]'
                     }`}
                   />
                   {errors.subject && (
@@ -490,8 +490,8 @@ export const Contact: React.FC = () => {
                     disabled={status === 'submitting'}
                     value={formData.budget}
                     onChange={handleChange}
-                    className={`w-full px-3.5 py-2.5 text-xs bg-[#F7F3EA] border rounded-xl appearance-none text-[#29261F] focus:outline-none transition-colors shadow-xs pr-10 cursor-pointer ${
-                      errors.budget ? 'border-[#C25450] focus:border-[#C25450]' : 'border-[#D8C7AD] focus:border-[#68724F]'
+                    className={`w-full px-3.5 py-2.5 text-xs bg-[#EAE2D2]/50 border rounded-xl appearance-none text-[#29261F] focus:outline-none transition-colors shadow-xs pr-10 cursor-pointer ${
+                      errors.budget ? 'border-[#C25450] focus:border-[#C25450]' : 'border-[#C9B89E] focus:border-[#68724F]'
                     } ${!formData.budget ? 'text-[#765C48]/70' : 'text-[#29261F]'}`}
                   >
                     <option value="" disabled>
@@ -525,8 +525,8 @@ export const Contact: React.FC = () => {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Briefly describe the role, requirements, or meeting request..."
-                  className={`w-full px-3.5 py-2.5 text-xs bg-[#F7F3EA] border rounded-xl text-[#29261F] placeholder-[#765C48]/60 focus:outline-none transition-colors resize-none shadow-xs ${
-                    errors.message ? 'border-[#C25450] focus:border-[#C25450]' : 'border-[#D8C7AD] focus:border-[#68724F]'
+                  className={`w-full px-3.5 py-2.5 text-xs bg-[#EAE2D2]/50 border rounded-xl text-[#29261F] placeholder-[#765C48]/60 focus:outline-none transition-colors resize-none shadow-xs ${
+                    errors.message ? 'border-[#C25450] focus:border-[#C25450]' : 'border-[#C9B89E] focus:border-[#68724F]'
                   }`}
                 />
                 {errors.message && (
@@ -541,30 +541,30 @@ export const Contact: React.FC = () => {
                   disabled={status === 'submitting'}
                   className={`w-full sm:w-auto px-7 py-3 rounded-xl font-bold text-xs shadow-md transition-all flex items-center justify-center gap-2 ${
                     status === 'submitting'
-                      ? 'bg-[#68724F] text-[#F7F3EA] cursor-not-allowed opacity-80'
+                      ? 'bg-[#68724F] text-[#FFFFFF] cursor-not-allowed opacity-80'
                       : status === 'error'
-                      ? 'bg-[#4F5A3D] hover:bg-[#68724F] text-[#F7F3EA] active:scale-[0.98]'
-                      : 'bg-[#4F5A3D] hover:bg-[#68724F] text-[#F7F3EA] hover:shadow-lg active:scale-[0.98]'
+                      ? 'bg-[#4F5A3D] hover:bg-[#68724F] text-[#FFFFFF] active:scale-[0.98]'
+                      : 'bg-[#4F5A3D] hover:bg-[#68724F] text-[#FFFFFF] hover:shadow-lg active:scale-[0.98]'
                   }`}
                 >
                   {status === 'submitting' ? (
                     <>
-                      <Loader2 className="w-4 h-4 animate-spin text-[#F7F3EA]" />
+                      <Loader2 className="w-4 h-4 animate-spin text-[#FFFFFF]" />
                       <span>Sending...</span>
                     </>
                   ) : status === 'error' ? (
                     <>
-                      <RotateCcw className="w-3.5 h-3.5 text-[#F7F3EA]" />
+                      <RotateCcw className="w-3.5 h-3.5 text-[#FFFFFF]" />
                       <span>Try Again</span>
                     </>
                   ) : status === 'success' ? (
                     <>
-                      <Check className="w-4 h-4 text-[#F7F3EA]" />
+                      <Check className="w-4 h-4 text-[#FFFFFF]" />
                       <span>Inquiry Sent ✓</span>
                     </>
                   ) : (
                     <>
-                      <Send className="w-3.5 h-3.5 text-[#F7F3EA]" />
+                      <Send className="w-3.5 h-3.5 text-[#FFFFFF]" />
                       <span>Send Inquiry</span>
                     </>
                   )}

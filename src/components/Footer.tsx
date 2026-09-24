@@ -12,7 +12,7 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="relative bg-[#4B382C] border-t border-[#765C48]/40 pt-12 pb-16 overflow-hidden text-[#F7F3EA]">
+    <footer className="relative bg-[#4B382C] border-t border-[#765C48]/40 pt-12 pb-16 overflow-hidden text-[#EAE2D2]">
       {/* Top glowing ambient gradient */}
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#A8B5A2]/40 to-transparent" />
 
@@ -21,11 +21,11 @@ export const Footer: React.FC = () => {
           {/* Identity */}
           <div className="flex items-center gap-3 text-left">
             <div className="w-10 h-10 rounded-xl bg-[#5A4537] border border-[#765C48] flex items-center justify-center shadow-xs">
-              <span className="font-mono text-xs font-bold text-[#F7F3EA]">AH</span>
+              <span className="font-mono text-xs font-bold text-[#FFFFFF]">AH</span>
             </div>
             <div>
-              <div className="text-sm font-bold text-[#F7F3EA]">Amit Halder</div>
-              <div className="text-xs text-[#D8C7AD] font-mono">
+              <div className="text-sm font-bold text-[#FFFFFF]">Amit Halder</div>
+              <div className="text-xs text-[#C9B89E] font-mono">
                 Data Entry Executive & Operations Professional
               </div>
             </div>
@@ -35,7 +35,7 @@ export const Footer: React.FC = () => {
           <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-mono">
             <a
               href={`mailto:${PERSONAL_INFO.email}`}
-              className="flex items-center gap-1.5 text-[#E6D8C3] hover:text-[#FFFFFF] transition-colors"
+              className="flex items-center gap-1.5 text-[#D5C7AF] hover:text-[#FFFFFF] transition-colors"
             >
               <Mail className="w-3.5 h-3.5 text-[#A8B5A2]" />
               <span>{PERSONAL_INFO.email}</span>
@@ -43,7 +43,7 @@ export const Footer: React.FC = () => {
             <span className="text-[#765C48]">·</span>
             <a
               href={`tel:${PERSONAL_INFO.phoneClean}`}
-              className="flex items-center gap-1.5 text-[#E6D8C3] hover:text-[#FFFFFF] transition-colors"
+              className="flex items-center gap-1.5 text-[#D5C7AF] hover:text-[#FFFFFF] transition-colors"
             >
               <Phone className="w-3.5 h-3.5 text-[#A8B5A2]" />
               <span>{PERSONAL_INFO.phone}</span>
@@ -53,7 +53,7 @@ export const Footer: React.FC = () => {
               href={PERSONAL_INFO.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-[#E6D8C3] hover:text-[#FFFFFF] transition-colors"
+              className="flex items-center gap-1.5 text-[#D5C7AF] hover:text-[#FFFFFF] transition-colors"
             >
               <LinkedInIcon className="w-3.5 h-3.5 text-[#A8B5A2]" />
               <span>LinkedIn</span>
@@ -63,7 +63,7 @@ export const Footer: React.FC = () => {
           {/* Back to Top */}
           <button
             onClick={scrollToTop}
-            className="group flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#5A4537] border border-[#765C48] text-[#E6D8C3] hover:text-[#FFFFFF] hover:bg-[#6F5444] text-xs font-mono transition-all shadow-xs"
+            className="group flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#5A4537] border border-[#765C48] text-[#D5C7AF] hover:text-[#FFFFFF] hover:bg-[#6F5444] text-xs font-mono transition-all shadow-xs"
             aria-label="Back to top"
           >
             <span>Back to top</span>
@@ -72,11 +72,11 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Credits & Grounding Notice */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#D8C7AD]/80 font-mono">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#C9B89E]/90 font-mono">
           <div>
             © {new Date().getFullYear()} Amit Halder. All operational data verified against curriculum vitae.
           </div>
-          <div className="flex items-center gap-1.5 text-[#D8C7AD]">
+          <div className="flex items-center gap-1.5 text-[#C9B89E]">
             <span className="w-1.5 h-1.5 rounded-full bg-[#A8B5A2]" />
             <span>Kolkata, West Bengal, India</span>
           </div>

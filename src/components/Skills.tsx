@@ -51,18 +51,18 @@ export const Skills: React.FC = () => {
   }, [activeCategory, searchQuery]);
 
   return (
-    <section id="skills" className="py-20 md:py-28 relative bg-transparent border-t border-[#D8C7AD]/40">
+    <section id="skills" className="py-20 md:py-28 relative bg-[#D5C7AF] border-t border-[#C9B89E]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F2EBDD]/90 backdrop-blur-md border border-[#68724F]/35 text-[#4F5A3D] text-xs font-mono font-medium shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1D7C4] border border-[#68724F]/35 text-[#4F5A3D] text-xs font-mono font-medium shadow-xs">
             <Sparkles className="w-3.5 h-3.5 text-[#68724F]" />
             <span>Technical & Operational Capabilities</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#4B382C] tracking-tight drop-shadow-xs">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#4B382C] tracking-tight">
             Verified Competencies Matrix
           </h2>
-          <p className="text-[#4B382C]/90 text-sm sm:text-base leading-relaxed font-medium">
+          <p className="text-[#665E55] text-sm sm:text-base leading-relaxed font-medium">
             Strictly derived from professional responsibilities in data validation, ERP administration, production analytics, and reporting.
           </p>
         </div>
@@ -70,7 +70,7 @@ export const Skills: React.FC = () => {
         {/* Filter Controls Bar */}
         <div className="max-w-4xl mx-auto mb-10 flex flex-col sm:flex-row items-center justify-between gap-4">
           {/* Category Tabs */}
-          <div className="flex flex-wrap items-center justify-center gap-1.5 p-1.5 rounded-xl bg-[#D8C7AD] border border-[#765C48]/20 w-full sm:w-auto shadow-xs">
+          <div className="flex flex-wrap items-center justify-center gap-1.5 p-1.5 rounded-xl bg-[#C9B89E] border border-[#765C48]/25 w-full sm:w-auto shadow-xs">
             {SKILL_CATEGORIES.map((cat) => {
               const isActive = activeCategory === cat.id;
               return (
@@ -79,8 +79,8 @@ export const Skills: React.FC = () => {
                   onClick={() => setActiveCategory(cat.id)}
                   className={`px-3.5 py-1.5 rounded-lg text-xs font-medium transition-all ${
                     isActive
-                      ? 'bg-[#68724F] text-[#F7F3EA] font-semibold shadow-xs'
-                      : 'text-[#4B382C] hover:text-[#29261F] hover:bg-[#F2EBDD]/60'
+                      ? 'bg-[#4F5A3D] text-[#FFFFFF] font-semibold shadow-xs'
+                      : 'text-[#4B382C] hover:text-[#29261F] hover:bg-[#D5C7AF]'
                   }`}
                 >
                   {cat.title}
@@ -117,10 +117,10 @@ export const Skills: React.FC = () => {
                     exit={{ opacity: 0, scale: 0.96 }}
                     transition={{ duration: 0.25, delay: index * 0.02 }}
                     key={skill.name}
-                    className="bg-[#FFFFFF] p-4 rounded-xl border border-[#D8C7AD] hover:border-[#68724F]/50 hover:bg-[#F7F3EA] transition-all flex items-center justify-between text-left group shadow-xs hover:shadow-sm"
+                    className="bg-[#FFFFFF] p-4 rounded-xl border border-[#C9B89E] hover:border-[#68724F]/50 hover:bg-[#EAE2D2] transition-all flex items-center justify-between text-left group shadow-xs hover:shadow-sm"
                   >
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-[#F2EBDD] border border-[#D8C7AD] group-hover:border-[#68724F]/40 flex items-center justify-center flex-shrink-0 transition-colors">
+                      <div className="w-8 h-8 rounded-lg bg-[#E1D7C4] border border-[#C9B89E] group-hover:border-[#68724F]/40 flex items-center justify-center flex-shrink-0 transition-colors">
                         <Icon className="w-4 h-4 text-[#68724F] group-hover:text-[#4F5A3D] transition-colors" />
                       </div>
                       <div>
@@ -141,7 +141,7 @@ export const Skills: React.FC = () => {
           </motion.div>
 
           {filteredSkills.length === 0 && (
-            <div className="text-center py-12 text-[#6F675D] text-sm font-mono">
+            <div className="text-center py-12 text-[#665E55] text-sm font-mono">
               No matching skills found for "{searchQuery}".
             </div>
           )}
@@ -149,14 +149,14 @@ export const Skills: React.FC = () => {
 
         {/* Competency Group Breakdowns */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mt-16 text-left">
-          <div className="bg-[#FFFFFF] p-6 rounded-2xl border border-[#D8C7AD] shadow-xs">
+          <div className="bg-[#FFFFFF] p-6 rounded-2xl border border-[#C9B89E] shadow-xs">
             <div className="flex items-center gap-2 mb-3">
               <Database className="w-4 h-4 text-[#68724F]" />
               <h4 className="text-sm font-bold text-[#4B382C] uppercase tracking-wider">
                 Data & Operations
               </h4>
             </div>
-            <p className="text-xs text-[#6F675D] leading-relaxed mb-4">
+            <p className="text-xs text-[#665E55] leading-relaxed mb-4">
               High-volume data capture, record integrity checks, and documentation workflows across industrial and warehouse operations.
             </p>
             <div className="text-[11px] font-mono text-[#4F5A3D] font-semibold">
@@ -164,14 +164,14 @@ export const Skills: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-[#FFFFFF] p-6 rounded-2xl border border-[#D8C7AD] shadow-xs">
+          <div className="bg-[#FFFFFF] p-6 rounded-2xl border border-[#C9B89E] shadow-xs">
             <div className="flex items-center gap-2 mb-3">
               <BarChart3 className="text-[#68724F] w-4 h-4" />
               <h4 className="text-sm font-bold text-[#4B382C] uppercase tracking-wider">
                 Analytics & Business Tools
               </h4>
             </div>
-            <p className="text-xs text-[#6F675D] leading-relaxed mb-4">
+            <p className="text-xs text-[#665E55] leading-relaxed mb-4">
               Structured analytical data extraction and executive reporting using Microsoft Excel and Power BI.
             </p>
             <div className="text-[11px] font-mono text-[#4F5A3D] font-semibold">
@@ -179,14 +179,14 @@ export const Skills: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-[#FFFFFF] p-6 rounded-2xl border border-[#D8C7AD] shadow-xs">
+          <div className="bg-[#FFFFFF] p-6 rounded-2xl border border-[#C9B89E] shadow-xs">
             <div className="flex items-center gap-2 mb-3">
               <Layers className="w-4 h-4 text-[#68724F]" />
               <h4 className="text-sm font-bold text-[#4B382C] uppercase tracking-wider">
                 ERP & Production Planning
               </h4>
             </div>
-            <p className="text-xs text-[#6F675D] leading-relaxed mb-4">
+            <p className="text-xs text-[#665E55] leading-relaxed mb-4">
               Enterprise Resource Planning operations, inventory synchronization, Material Requirements Planning (MRP), and dispatch logs.
             </p>
             <div className="text-[11px] font-mono text-[#4F5A3D] font-semibold">

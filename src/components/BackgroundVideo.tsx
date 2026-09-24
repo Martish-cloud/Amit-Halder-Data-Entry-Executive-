@@ -19,10 +19,10 @@ export const BackgroundVideo: React.FC = () => {
 
   return (
     <div
-      className="fixed inset-0 z-0 pointer-events-none overflow-hidden select-none"
+      className="absolute inset-0 -z-10 pointer-events-none overflow-hidden select-none"
       aria-hidden="true"
     >
-      {/* Fixed Background Video - Vivid, clean & clearly visible with subtle soft blur (matching ML portfolio treatment) */}
+      {/* Hero Scoped Background Video - Young Master visual background */}
       <video
         ref={videoRef}
         autoPlay
@@ -30,7 +30,7 @@ export const BackgroundVideo: React.FC = () => {
         muted
         playsInline
         preload="auto"
-        className="w-full h-full object-cover object-center filter blur-[1px] scale-[1.01] transform-gpu opacity-85"
+        className="w-full h-full object-cover object-center filter blur-[0.5px] scale-[1.01] transform-gpu opacity-85"
       >
         <source src="./background/young-master.mp4" type="video/mp4" />
         <source src="/background/young-master.mp4" type="video/mp4" />
@@ -39,8 +39,11 @@ export const BackgroundVideo: React.FC = () => {
         <source src="./background/young-master-where-winds-meet-moewalls.mp4" type="video/mp4" />
       </video>
 
-      {/* Subtle atmospheric tint to maintain readability while keeping the video clean and visible */}
-      <div className="absolute inset-0 bg-[#29261F]/15 pointer-events-none transition-colors duration-300" />
+      {/* Subtle atmospheric tint to maintain readability */}
+      <div className="absolute inset-0 bg-[#29261F]/20 pointer-events-none" />
+
+      {/* Seamless bottom fade into dimmed next section */}
+      <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-b from-transparent to-[#E1D7C4] pointer-events-none" />
     </div>
   );
 };
