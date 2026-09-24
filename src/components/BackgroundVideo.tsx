@@ -1,26 +1,46 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export const BackgroundVideo: React.FC = () => {
   const [videoError, setVideoError] = useState(false);
-  const videoSrc = `${import.meta.env.BASE_URL}background/young-master-where-winds-meet-moewalls.mp4`;
+  const [reducedMotion, setReducedMotion] = useState(() => {
+    if (typeof window !== 'undefined' && window.matchMedia) {
+      return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    }
+    return false;
+  });
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || !window.matchMedia) return;
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const handleChange = (e: MediaQueryListEvent) => {
+      setReducedMotion(e.matches);
+    };
+
+    mediaQuery.addEventListener?.('change', handleChange);
+    return () => mediaQuery.removeEventListener?.('change', handleChange);
+  }, []);
+
+  const videoSrc = `${import.meta.env.BASE_URL}background/young-master.mp4`;
+  const fallbackSrc = `${import.meta.env.BASE_URL}background/young-master-where-winds-meet-moewalls.mp4`;
 
   return (
     <div
-      className="fixed inset-0 z-0 pointer-events-none overflow-hidden select-none"
+      className="fixed inset-0 z-0 pointer-events-none overflow-hidden select-none bg-[#F7F3EA]"
       aria-hidden="true"
     >
-      {/* Cinematic Background Video */}
-      {!videoError && (
+      {/* Cinematic Background Video - respects reduced motion, preloads metadata, non-blocking */}
+      {!videoError && !reducedMotion && (
         <video
           autoPlay
           loop
           muted
           playsInline
-          preload="auto"
+          preload="metadata"
           onError={() => setVideoError(true)}
           className="w-full h-full object-cover object-center filter blur-[1.5px] scale-[1.02] transform-gpu opacity-45 sm:opacity-50 transition-opacity duration-700"
         >
           <source src={videoSrc} type="video/mp4" />
+          <source src={fallbackSrc} type="video/mp4" />
         </video>
       )}
 

@@ -21,6 +21,7 @@ import { PERSONAL_INFO } from '../data/cvData';
 interface FormState {
   name: string;
   email: string;
+  contact_number: string;
   subject: string;
   budget: string;
   message: string;
@@ -29,6 +30,7 @@ interface FormState {
 interface FormErrors {
   name?: string;
   email?: string;
+  contact_number?: string;
   subject?: string;
   budget?: string;
   message?: string;
@@ -44,6 +46,7 @@ export const Contact: React.FC = () => {
   const [formData, setFormData] = useState<FormState>({
     name: '',
     email: '',
+    contact_number: '',
     subject: '',
     budget: '',
     message: '',
@@ -90,6 +93,14 @@ export const Contact: React.FC = () => {
       newErrors.email = 'Please enter a valid email address.';
     }
 
+    // Contact number is strictly OPTIONAL - only check format if provided
+    if (formData.contact_number.trim()) {
+      const digitsOnly = formData.contact_number.replace(/\D/g, '');
+      if (digitsOnly.length < 7 || digitsOnly.length > 15 || !/^[+0-9\s()\-.]+$/.test(formData.contact_number.trim())) {
+        newErrors.contact_number = 'Please enter a valid phone number or leave blank.';
+      }
+    }
+
     if (!formData.subject.trim()) {
       newErrors.subject = 'Please enter a subject / role title.';
     }
@@ -117,9 +128,12 @@ export const Contact: React.FC = () => {
     setStatusMessage('');
 
     try {
+      const contactVal = formData.contact_number.trim();
       const payload = {
         name: formData.name.trim(),
         email: formData.email.trim(),
+        contact_number: contactVal || 'Not Provided',
+        'Contact No.': contactVal || 'Not Provided',
         subject: formData.subject.trim(),
         'Budget / Salary Range': formData.budget.trim(),
         budget: formData.budget.trim(),
@@ -148,6 +162,7 @@ export const Contact: React.FC = () => {
         setFormData({
           name: '',
           email: '',
+          contact_number: '',
           subject: '',
           budget: '',
           message: '',
@@ -414,27 +429,52 @@ export const Contact: React.FC = () => {
                 </div>
               </div>
 
-              {/* Subject Input */}
-              <div>
-                <label htmlFor="subject" className="block text-xs font-mono text-[#4B382C] font-medium mb-1.5">
-                  Subject / Role Title <span className="text-[#A33E3B]">*</span>
-                </label>
-                <input
-                  id="subject"
-                  name="subject"
-                  type="text"
-                  required
-                  disabled={status === 'submitting'}
-                  value={formData.subject}
-                  onChange={handleChange}
-                  placeholder="e.g. Opportunity: Data Entry & Operations Professional"
-                  className={`w-full px-3.5 py-2.5 text-xs bg-[#F7F3EA] border rounded-xl text-[#29261F] placeholder-[#765C48]/60 focus:outline-none transition-colors shadow-xs ${
-                    errors.subject ? 'border-[#C25450] focus:border-[#C25450]' : 'border-[#D8C7AD] focus:border-[#68724F]'
-                  }`}
-                />
-                {errors.subject && (
-                  <p className="text-[11px] text-[#A33E3B] font-mono mt-1">{errors.subject}</p>
-                )}
+              {/* Row 2: Contact No. (Optional) and Subject / Role Title */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="contact_number" className="block text-xs font-mono text-[#4B382C] font-medium mb-1.5 flex items-center justify-between">
+                    <span>Contact No.</span>
+                    <span className="text-[10px] text-[#6F675D] font-normal">(Optional)</span>
+                  </label>
+                  <input
+                    id="contact_number"
+                    name="contact_number"
+                    type="tel"
+                    autoComplete="tel"
+                    disabled={status === 'submitting'}
+                    value={formData.contact_number}
+                    onChange={handleChange}
+                    placeholder="e.g. +91 98765 43210"
+                    className={`w-full px-3.5 py-2.5 text-xs bg-[#F7F3EA] border rounded-xl text-[#29261F] placeholder-[#765C48]/60 focus:outline-none transition-colors shadow-xs ${
+                      errors.contact_number ? 'border-[#C25450] focus:border-[#C25450]' : 'border-[#D8C7AD] focus:border-[#68724F]'
+                    }`}
+                  />
+                  {errors.contact_number && (
+                    <p className="text-[11px] text-[#A33E3B] font-mono mt-1">{errors.contact_number}</p>
+                  )}
+                </div>
+
+                <div>
+                  <label htmlFor="subject" className="block text-xs font-mono text-[#4B382C] font-medium mb-1.5">
+                    Subject / Role Title <span className="text-[#A33E3B]">*</span>
+                  </label>
+                  <input
+                    id="subject"
+                    name="subject"
+                    type="text"
+                    required
+                    disabled={status === 'submitting'}
+                    value={formData.subject}
+                    onChange={handleChange}
+                    placeholder="e.g. Opportunity: Data Entry & Operations Professional"
+                    className={`w-full px-3.5 py-2.5 text-xs bg-[#F7F3EA] border rounded-xl text-[#29261F] placeholder-[#765C48]/60 focus:outline-none transition-colors shadow-xs ${
+                      errors.subject ? 'border-[#C25450] focus:border-[#C25450]' : 'border-[#D8C7AD] focus:border-[#68724F]'
+                    }`}
+                  />
+                  {errors.subject && (
+                    <p className="text-[11px] text-[#A33E3B] font-mono mt-1">{errors.subject}</p>
+                  )}
+                </div>
               </div>
 
               {/* Budget / Salary Range Select */}
