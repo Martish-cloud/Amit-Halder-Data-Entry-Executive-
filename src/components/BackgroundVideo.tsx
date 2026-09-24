@@ -20,8 +20,9 @@ export const BackgroundVideo: React.FC = () => {
     return () => mediaQuery.removeEventListener?.('change', handleChange);
   }, []);
 
-  const videoSrc = `${import.meta.env.BASE_URL}background/young-master.mp4`;
-  const fallbackSrc = `${import.meta.env.BASE_URL}background/young-master-where-winds-meet-moewalls.mp4`;
+  const rootVideoSrc = `${import.meta.env.BASE_URL}young-master.mp4`;
+  const bgVideoSrc = `${import.meta.env.BASE_URL}background/young-master.mp4`;
+  const legacyVideoSrc = `${import.meta.env.BASE_URL}background/young-master-where-winds-meet-moewalls.mp4`;
 
   return (
     <div
@@ -39,8 +40,9 @@ export const BackgroundVideo: React.FC = () => {
           onError={() => setVideoError(true)}
           className="w-full h-full object-cover object-center filter blur-[1.5px] scale-[1.02] transform-gpu opacity-45 sm:opacity-50 transition-opacity duration-700"
         >
-          <source src={videoSrc} type="video/mp4" />
-          <source src={fallbackSrc} type="video/mp4" />
+          <source src={rootVideoSrc} type="video/mp4" />
+          <source src={bgVideoSrc} type="video/mp4" />
+          <source src={legacyVideoSrc} type="video/mp4" />
         </video>
       )}
 
