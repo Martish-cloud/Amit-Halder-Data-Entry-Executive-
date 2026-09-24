@@ -32,18 +32,18 @@ export const Languages: React.FC = () => {
   };
 
   return (
-    <section id="languages" className="py-20 md:py-28 relative bg-[#F2EBDD]/80 backdrop-blur-sm border-t border-[#D8C7AD]/60">
+    <section id="languages" className="py-20 md:py-28 relative bg-transparent border-t border-[#D8C7AD]/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#A8B5A2]/25 border border-[#68724F]/30 text-[#4F5A3D] text-xs font-mono font-medium">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F2EBDD]/90 backdrop-blur-md border border-[#68724F]/35 text-[#4F5A3D] text-xs font-mono font-medium shadow-xs">
             <Globe2 className="w-3.5 h-3.5 text-[#68724F]" />
             <span>Multilingual Communication</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#4B382C] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#4B382C] tracking-tight drop-shadow-xs">
             Language Proficiencies
           </h2>
-          <p className="text-[#6F675D] text-sm sm:text-base leading-relaxed">
+          <p className="text-[#4B382C]/90 text-sm sm:text-base leading-relaxed font-medium">
             Proficiency levels recorded directly from the CV for operational and cross-regional communication.
           </p>
         </div>

@@ -51,18 +51,18 @@ export const Skills: React.FC = () => {
   }, [activeCategory, searchQuery]);
 
   return (
-    <section id="skills" className="py-20 md:py-28 relative bg-[#E6D8C3]/80 backdrop-blur-sm border-t border-[#D8C7AD]">
+    <section id="skills" className="py-20 md:py-28 relative bg-transparent border-t border-[#D8C7AD]/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#A8B5A2]/30 border border-[#68724F]/35 text-[#4F5A3D] text-xs font-mono font-medium">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F2EBDD]/90 backdrop-blur-md border border-[#68724F]/35 text-[#4F5A3D] text-xs font-mono font-medium shadow-xs">
             <Sparkles className="w-3.5 h-3.5 text-[#68724F]" />
             <span>Technical & Operational Capabilities</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#4B382C] tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#4B382C] tracking-tight drop-shadow-xs">
             Verified Competencies Matrix
           </h2>
-          <p className="text-[#6F675D] text-sm sm:text-base leading-relaxed">
+          <p className="text-[#4B382C]/90 text-sm sm:text-base leading-relaxed font-medium">
             Strictly derived from professional responsibilities in data validation, ERP administration, production analytics, and reporting.
           </p>
         </div>
