@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FileDown, Menu, X, Check, Mail } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/cvData';
-import confetti from 'canvas-confetti';
+import { triggerConfetti } from '../utils/confetti';
 
 interface NavbarProps {
   onDownloadResume?: () => void;
@@ -25,19 +25,27 @@ export const Navbar: React.FC<NavbarProps> = ({ onDownloadResume }) => {
   const [downloadSuccess, setDownloadSuccess] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 40);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 40);
 
-      // Scroll-spy: Determine active section
-      const sections = NAV_LINKS.map((item) => item.href.substring(1));
-      const scrollPosition = window.scrollY + 180;
+          // Scroll-spy: Determine active section
+          const sections = NAV_LINKS.map((item) => item.href.substring(1));
+          const scrollPosition = window.scrollY + 180;
 
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const el = document.getElementById(sections[i]);
-        if (el && el.offsetTop <= scrollPosition) {
-          setActiveSection(sections[i]);
-          break;
-        }
+          for (let i = sections.length - 1; i >= 0; i--) {
+            const el = document.getElementById(sections[i]);
+            if (el && el.offsetTop <= scrollPosition) {
+              setActiveSection(sections[i]);
+              break;
+            }
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
@@ -59,16 +67,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onDownloadResume }) => {
       document.body.removeChild(link);
     }
 
-    try {
-      confetti({
-        particleCount: 40,
-        spread: 50,
-        origin: { y: 0.1 },
-        colors: ['#A8B5A2', '#68724F', '#4F5A3D', '#D8C7AD'],
-      });
-    } catch {
-      // fallback
-    }
+    triggerConfetti({ origin: { y: 0.1 } });
 
     setDownloadSuccess(true);
     setTimeout(() => setDownloadSuccess(false), 3000);

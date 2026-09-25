@@ -35,7 +35,13 @@ export const Languages: React.FC = () => {
     <section id="languages" className="py-20 md:py-28 relative bg-[#E1D7C4]/85 backdrop-blur-xs border-t border-[#C9B89E]/70">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          className="text-center max-w-3xl mx-auto mb-16 space-y-3"
+        >
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EAE2D2] border border-[#68724F]/35 text-[#4F5A3D] text-xs font-mono font-medium shadow-xs">
             <Globe2 className="w-3.5 h-3.5 text-[#68724F]" />
             <span>Multilingual Communication</span>
@@ -46,7 +52,7 @@ export const Languages: React.FC = () => {
           <p className="text-[#665E55] text-sm sm:text-base leading-relaxed font-medium">
             Proficiency levels recorded directly from the CV for operational and cross-regional communication.
           </p>
-        </div>
+        </motion.div>
 
         {/* Language Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto text-left">
@@ -58,7 +64,7 @@ export const Languages: React.FC = () => {
                 key={lang.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false, amount: 0.15 }}
                 transition={{ duration: 0.4, delay: idx * 0.08 }}
                 className="bg-[#FFFFFF] p-5 rounded-2xl border border-[#C9B89E] hover:border-[#68724F]/50 transition-all flex flex-col justify-between group shadow-xs hover:shadow-md"
               >

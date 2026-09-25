@@ -13,7 +13,7 @@ import {
 import { PERSONAL_INFO } from '../data/cvData';
 import { DataFlowGraphic } from './DataFlowGraphic';
 import { BackgroundVideo } from './BackgroundVideo';
-import confetti from 'canvas-confetti';
+import { triggerConfetti } from '../utils/confetti';
 
 interface HeroProps {
   onDownloadResume?: () => void;
@@ -35,16 +35,7 @@ export const Hero: React.FC<HeroProps> = ({ onDownloadResume }) => {
       document.body.removeChild(link);
     }
 
-    try {
-      confetti({
-        particleCount: 40,
-        spread: 50,
-        origin: { y: 0.2 },
-        colors: ['#A8B5A2', '#68724F', '#4F5A3D', '#D8C7AD'],
-      });
-    } catch {
-      // fallback
-    }
+    triggerConfetti({ origin: { y: 0.2 } });
 
     setDownloaded(true);
     setTimeout(() => setDownloaded(false), 3000);
@@ -79,7 +70,8 @@ export const Hero: React.FC<HeroProps> = ({ onDownloadResume }) => {
             {/* Status chip */}
             <motion.div
               initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.2 }}
               transition={{ duration: 0.5 }}
               className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1D7C4]/90 backdrop-blur-md border border-[#C9B89E] shadow-sm"
             >
@@ -97,7 +89,8 @@ export const Hero: React.FC<HeroProps> = ({ onDownloadResume }) => {
             {/* Name & Title */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.2 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               className="space-y-2"
             >
@@ -114,7 +107,8 @@ export const Hero: React.FC<HeroProps> = ({ onDownloadResume }) => {
             {/* CV-Grounded Supporting Statement */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.2 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-sm sm:text-base text-[#6F675D] leading-relaxed max-w-2xl font-normal"
             >
@@ -124,7 +118,8 @@ export const Hero: React.FC<HeroProps> = ({ onDownloadResume }) => {
             {/* Micro Tags */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.2 }}
               transition={{ duration: 0.6, delay: 0.25 }}
               className="flex flex-wrap gap-2 pt-1"
             >
@@ -150,7 +145,8 @@ export const Hero: React.FC<HeroProps> = ({ onDownloadResume }) => {
             {/* Action Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.2 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               className="flex flex-wrap gap-3 pt-4"
             >
@@ -195,7 +191,8 @@ export const Hero: React.FC<HeroProps> = ({ onDownloadResume }) => {
           {/* Right Column: Interactive Data Operations Flow Graphic */}
           <motion.div
             initial={{ opacity: 0, scale: 0.96 }}
-            animate={{ opacity: 1, scale: 1 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.7, delay: 0.2 }}
             className="lg:col-span-5"
           >

@@ -38,7 +38,13 @@ export const About: React.FC = () => {
     <section id="about" className="py-20 md:py-28 relative bg-[#E1D7C4]/85 backdrop-blur-xs border-t border-[#C9B89E]/70">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          className="text-center max-w-3xl mx-auto mb-16 space-y-3"
+        >
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EAE2D2] border border-[#68724F]/35 text-[#4F5A3D] text-xs font-mono font-medium shadow-xs">
             <Database className="w-3.5 h-3.5 text-[#68724F]" />
             <span>Professional Profile & Philosophy</span>
@@ -49,7 +55,7 @@ export const About: React.FC = () => {
           <p className="text-[#665E55] text-sm sm:text-base leading-relaxed font-medium">
             Derived directly from verified professional experience across manufacturing, printing, and packaging enterprises.
           </p>
-        </div>
+        </motion.div>
 
         {/* Verified Metric Cards (100% CV Grounded) */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
@@ -58,8 +64,8 @@ export const About: React.FC = () => {
               key={idx}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              viewport={{ once: false, amount: 0.15 }}
+              transition={{ duration: 0.5, delay: idx * 0.08 }}
               className="bg-[#FFFFFF] p-5 rounded-2xl border border-[#C9B89E] text-left hover:border-[#68724F]/50 shadow-xs hover:shadow-md transition-all group"
             >
               <div className="font-mono text-3xl sm:text-4xl font-extrabold text-[#4F5A3D] group-hover:scale-105 transition-transform origin-left">
@@ -78,7 +84,13 @@ export const About: React.FC = () => {
         {/* Executive Summary Narrative & Core Strengths */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
           {/* Executive Summary Card */}
-          <div className="lg:col-span-6 bg-[#FFFFFF] p-6 sm:p-8 rounded-2xl border border-[#C9B89E] text-left space-y-4 shadow-sm">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.15 }}
+            transition={{ duration: 0.5 }}
+            className="lg:col-span-6 bg-[#FFFFFF] p-6 sm:p-8 rounded-2xl border border-[#C9B89E] text-left space-y-4 shadow-sm"
+          >
             <h3 className="text-lg font-bold text-[#4B382C] flex items-center gap-2.5">
               <Award className="w-5 h-5 text-[#68724F]" />
               <span>Executive Summary</span>
@@ -111,7 +123,7 @@ export const About: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Key Strengths Grid */}
           <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -122,8 +134,8 @@ export const About: React.FC = () => {
                   key={idx}
                   initial={{ opacity: 0, y: 15 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: idx * 0.1 }}
+                  viewport={{ once: false, amount: 0.15 }}
+                  transition={{ duration: 0.4, delay: idx * 0.08 }}
                   className="bg-[#FFFFFF] p-5 rounded-xl border border-[#C9B89E] text-left hover:border-[#68724F]/50 shadow-xs hover:shadow-sm transition-all"
                 >
                   <div className="w-9 h-9 rounded-lg bg-[#E1D7C4] border border-[#C9B89E] flex items-center justify-center mb-3 text-[#4F5A3D]">
@@ -143,14 +155,20 @@ export const About: React.FC = () => {
 
         {/* Operational Pillars Deep-Dive */}
         <div className="space-y-6 text-left">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[#C9B89E] pb-4">
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.2 }}
+            transition={{ duration: 0.4 }}
+            className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[#C9B89E] pb-4"
+          >
             <h3 className="text-xl font-bold text-[#4B382C] tracking-tight">
               Operational Competencies Framework
             </h3>
             <span className="text-xs font-mono text-[#4F5A3D] font-semibold">
               4 Pillar Architecture
             </span>
-          </div>
+          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {OPERATIONAL_PILLARS.map((pillar, i) => (
@@ -158,8 +176,8 @@ export const About: React.FC = () => {
                 key={pillar.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
+                viewport={{ once: false, amount: 0.15 }}
+                transition={{ duration: 0.5, delay: i * 0.08 }}
                 className="bg-[#FFFFFF] p-5 rounded-xl border border-[#C9B89E] hover:border-[#68724F]/50 shadow-xs hover:shadow-md transition-all flex flex-col justify-between group"
               >
                 <div>

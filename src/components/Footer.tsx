@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { ArrowUp, Mail, Phone } from 'lucide-react';
 import { LinkedInIcon } from './icons/LinkedInIcon';
 import { PERSONAL_INFO } from '../data/cvData';
@@ -17,7 +18,13 @@ export const Footer: React.FC = () => {
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#A8B5A2]/40 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-[#765C48]/40">
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-[#765C48]/40"
+        >
           {/* Identity */}
           <div className="flex items-center gap-3 text-left">
             <div className="w-10 h-10 rounded-xl bg-[#5A4537] border border-[#765C48] flex items-center justify-center shadow-xs">
@@ -69,10 +76,16 @@ export const Footer: React.FC = () => {
             <span>Back to top</span>
             <ArrowUp className="w-3.5 h-3.5 text-[#A8B5A2] group-hover:-translate-y-0.5 transition-transform" />
           </button>
-        </div>
+        </motion.div>
 
         {/* Bottom Credits & Grounding Notice */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#C9B89E]/90 font-mono">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#C9B89E]/90 font-mono"
+        >
           <div>
             © {new Date().getFullYear()} Amit Halder. All operational data verified against curriculum vitae.
           </div>
@@ -80,7 +93,7 @@ export const Footer: React.FC = () => {
             <span className="w-1.5 h-1.5 rounded-full bg-[#A8B5A2]" />
             <span>Kolkata, West Bengal, India</span>
           </div>
-        </div>
+        </motion.div>
       </div>
     </footer>
   );

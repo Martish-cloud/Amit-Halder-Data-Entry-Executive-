@@ -1,98 +1,126 @@
-import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useRef, useState } from 'react';
 
 export const CustomCursor: React.FC = () => {
-  const [mousePosition, setMousePosition] = useState({ x: -100, y: -100 });
-  const [isHovered, setIsHovered] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-  const [isPointerDevice, setIsPointerDevice] = useState(() => {
+  const [isPointerDevice] = useState(() => {
     if (typeof window === 'undefined') return false;
     return window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   });
 
+  const cursorRef = useRef<HTMLDivElement>(null);
+  const dotRef = useRef<HTMLDivElement>(null);
+  const posRef = useRef({ targetX: -100, targetY: -100, currentX: -100, currentY: -100 });
+  const isHoveredRef = useRef(false);
+  const isVisibleRef = useRef(false);
+
   useEffect(() => {
-    // Check if pointer is fine and hover is supported (non-touch)
-    const mediaQuery = window.matchMedia('(hover: hover) and (pointer: fine)');
+    if (!isPointerDevice) return;
 
-    const handleMediaChange = (e: MediaQueryListEvent) => {
-      setIsPointerDevice(e.matches);
+    let animId: number;
+    const ring = cursorRef.current;
+    const dot = dotRef.current;
+    if (!ring || !dot) return;
+
+    // Smooth 60/120fps lerp loop for the outer ring without triggering React re-renders
+    const render = () => {
+      const { targetX, targetY, currentX, currentY } = posRef.current;
+      const ease = 0.2;
+      const nextX = currentX + (targetX - currentX) * ease;
+      const nextY = currentY + (targetY - currentY) * ease;
+      posRef.current.currentX = nextX;
+      posRef.current.currentY = nextY;
+
+      const hovered = isHoveredRef.current;
+      const ringOffset = hovered ? 24 : 16;
+      ring.style.transform = `translate3d(${nextX - ringOffset}px, ${nextY - ringOffset}px, 0)`;
+      dot.style.transform = `translate3d(${targetX - 3}px, ${targetY - 3}px, 0) scale(${hovered ? 1.5 : 1})`;
+
+      animId = requestAnimationFrame(render);
     };
 
-    mediaQuery.addEventListener('change', handleMediaChange);
+    animId = requestAnimationFrame(render);
 
-    if (!mediaQuery.matches) return;
-
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-      if (!isVisible) setIsVisible(true);
+    const onMouseMove = (e: MouseEvent) => {
+      posRef.current.targetX = e.clientX;
+      posRef.current.targetY = e.clientY;
+      if (!isVisibleRef.current) {
+        isVisibleRef.current = true;
+        ring.style.opacity = '1';
+        dot.style.opacity = '1';
+      }
     };
 
-    const handleMouseLeave = () => {
-      setIsVisible(false);
-    };
-
-    const handleMouseEnter = () => {
-      setIsVisible(true);
-    };
-
-    // Check hover on interactive targets
-    const handleElementHover = (e: MouseEvent) => {
+    const onMouseOver = (e: MouseEvent) => {
       const target = e.target as HTMLElement | null;
       if (!target) return;
-      const interactive = target.closest('button, a, input, textarea, [role="button"], .interactive-card');
-      setIsHovered(!!interactive);
+      const isInteractive = !!target.closest('button, a, input, textarea, select, [role="button"], .interactive-card');
+      if (isInteractive !== isHoveredRef.current) {
+        isHoveredRef.current = isInteractive;
+        if (isInteractive) {
+          ring.style.width = '48px';
+          ring.style.height = '48px';
+          ring.style.backgroundColor = 'rgba(168, 181, 162, 0.22)';
+          ring.style.borderColor = 'rgba(79, 90, 61, 0.8)';
+        } else {
+          ring.style.width = '32px';
+          ring.style.height = '32px';
+          ring.style.backgroundColor = 'rgba(168, 181, 162, 0.08)';
+          ring.style.borderColor = 'rgba(104, 114, 79, 0.45)';
+        }
+      }
     };
 
-    window.addEventListener('mousemove', handleMouseMove, { passive: true });
-    window.addEventListener('mousemove', handleElementHover, { passive: true });
-    document.addEventListener('mouseleave', handleMouseLeave);
-    document.addEventListener('mouseenter', handleMouseEnter);
+    const onMouseLeave = () => {
+      isVisibleRef.current = false;
+      ring.style.opacity = '0';
+      dot.style.opacity = '0';
+    };
+
+    const onMouseEnter = () => {
+      isVisibleRef.current = true;
+      ring.style.opacity = '1';
+      dot.style.opacity = '1';
+    };
+
+    window.addEventListener('mousemove', onMouseMove, { passive: true });
+    window.addEventListener('mouseover', onMouseOver, { passive: true });
+    document.addEventListener('mouseleave', onMouseLeave);
+    document.addEventListener('mouseenter', onMouseEnter);
 
     return () => {
-      mediaQuery.removeEventListener('change', handleMediaChange);
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('mousemove', handleElementHover);
-      document.removeEventListener('mouseleave', handleMouseLeave);
-      document.removeEventListener('mouseenter', handleMouseEnter);
+      cancelAnimationFrame(animId);
+      window.removeEventListener('mousemove', onMouseMove);
+      window.removeEventListener('mouseover', onMouseOver);
+      document.removeEventListener('mouseleave', onMouseLeave);
+      document.removeEventListener('mouseenter', onMouseEnter);
     };
-  }, [isVisible]);
+  }, [isPointerDevice]);
 
-  if (!isPointerDevice || !isVisible) return null;
+  if (!isPointerDevice) return null;
 
   return (
     <>
       {/* Outer ring */}
-      <motion.div
-        className="fixed top-0 left-0 pointer-events-none z-50 rounded-full border border-[#68724F]/40"
-        animate={{
-          x: mousePosition.x - (isHovered ? 24 : 16),
-          y: mousePosition.y - (isHovered ? 24 : 16),
-          width: isHovered ? 48 : 32,
-          height: isHovered ? 48 : 32,
-          backgroundColor: isHovered ? 'rgba(168, 181, 162, 0.22)' : 'rgba(168, 181, 162, 0.08)',
-          borderColor: isHovered ? 'rgba(79, 90, 61, 0.8)' : 'rgba(104, 114, 79, 0.45)',
-        }}
-        transition={{
-          type: 'spring',
-          stiffness: 400,
-          damping: 28,
-          mass: 0.5,
+      <div
+        ref={cursorRef}
+        aria-hidden="true"
+        className="fixed top-0 left-0 pointer-events-none z-50 rounded-full border transition-[width,height,background-color,border-color] duration-200 ease-out opacity-0 border-[#68724F]/40"
+        style={{
+          width: '32px',
+          height: '32px',
+          backgroundColor: 'rgba(168, 181, 162, 0.08)',
+          borderColor: 'rgba(104, 114, 79, 0.45)',
+          willChange: 'transform',
         }}
       />
       {/* Inner dot */}
-      <motion.div
-        className="fixed top-0 left-0 pointer-events-none z-50 rounded-full bg-[#4F5A3D]"
-        animate={{
-          x: mousePosition.x - 3,
-          y: mousePosition.y - 3,
-          width: 6,
-          height: 6,
-          scale: isHovered ? 1.5 : 1,
-        }}
-        transition={{
-          type: 'spring',
-          stiffness: 800,
-          damping: 35,
+      <div
+        ref={dotRef}
+        aria-hidden="true"
+        className="fixed top-0 left-0 pointer-events-none z-50 rounded-full bg-[#4F5A3D] opacity-0 transition-transform duration-100 ease-out"
+        style={{
+          width: '6px',
+          height: '6px',
+          willChange: 'transform',
         }}
       />
     </>

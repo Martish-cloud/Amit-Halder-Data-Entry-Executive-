@@ -1,0 +1,6 @@
+# Redirect old/nested background video URLs to root canonical asset
+/background/young-master-where-winds-meet-moewalls.mp4 /young-master.mp4 301
+/background/young-master.mp4 /young-master.mp4 301
+
+# Single-Page Application (SPA) fallback
+/* /index.html 200

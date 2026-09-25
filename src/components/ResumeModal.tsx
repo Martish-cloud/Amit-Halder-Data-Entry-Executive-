@@ -2,7 +2,7 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, FileDown, Printer, ShieldCheck } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/cvData';
-import confetti from 'canvas-confetti';
+import { triggerConfetti } from '../utils/confetti';
 
 interface ResumeModalProps {
   isOpen: boolean;
@@ -20,16 +20,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
     link.click();
     document.body.removeChild(link);
 
-    try {
-      confetti({
-        particleCount: 40,
-        spread: 50,
-        origin: { y: 0.3 },
-        colors: ['#A8B5A2', '#68724F', '#4F5A3D', '#D8C7AD'],
-      });
-    } catch {
-      // fallback
-    }
+    triggerConfetti({ origin: { y: 0.3 } });
   };
 
   const handlePrint = () => {

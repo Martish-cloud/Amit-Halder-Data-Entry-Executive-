@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, lazy, Suspense } from 'react';
 import { CustomCursor } from './components/CustomCursor';
 import { ScrollProgress } from './components/ScrollProgress';
 import { Navbar } from './components/Navbar';
@@ -10,7 +10,11 @@ import { Education } from './components/Education';
 import { Languages } from './components/Languages';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
-import { ResumeModal } from './components/ResumeModal';
+
+// Lazy-load modal to keep initial critical JavaScript bundle lean
+const ResumeModal = lazy(() =>
+  import('./components/ResumeModal').then((m) => ({ default: m.ResumeModal }))
+);
 
 export function App() {
   const [resumeModalOpen, setResumeModalOpen] = useState(false);
@@ -26,14 +30,8 @@ export function App() {
         style={{ opacity: 0.20 }}
         aria-hidden="true"
       >
-        {/* Subtle warm geometric grid & dot patterns */}
-        <div className="absolute inset-0 bg-grid-warm bg-dots-warm" />
-
-        {/* Ambient atmospheric warm accents */}
-        <div className="absolute -top-32 -left-32 w-[600px] h-[600px] rounded-full bg-[#A8B5A2] blur-3xl transform-gpu" />
-        <div className="absolute top-1/3 -right-32 w-[500px] h-[500px] rounded-full bg-[#68724F] blur-3xl transform-gpu" />
-        <div className="absolute bottom-1/3 -left-32 w-[550px] h-[550px] rounded-full bg-[#D5C7AF] blur-3xl transform-gpu" />
-        <div className="absolute -bottom-32 right-1/4 w-[600px] h-[600px] rounded-full bg-[#4F5A3D] blur-3xl transform-gpu" />
+        {/* Hardware-accelerated warm ambient background & subtle geometric patterns */}
+        <div className="absolute inset-0 bg-ambient-warm bg-grid-warm bg-dots-warm" />
       </div>
 
       {/* Subtle Desktop Interactive Cursor */}
@@ -62,10 +60,14 @@ export function App() {
       </div>
 
       {/* Resume Download / Preview Modal */}
-      <ResumeModal
-        isOpen={resumeModalOpen}
-        onClose={() => setResumeModalOpen(false)}
-      />
+      {resumeModalOpen && (
+        <Suspense fallback={null}>
+          <ResumeModal
+            isOpen={resumeModalOpen}
+            onClose={() => setResumeModalOpen(false)}
+          />
+        </Suspense>
+      )}
     </div>
   );
 }

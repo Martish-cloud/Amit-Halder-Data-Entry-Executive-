@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import {
   Mail,
   Phone,
@@ -184,7 +185,13 @@ export const Contact: React.FC = () => {
     <section id="contact" className="py-20 md:py-28 relative bg-[#C9B89E]/85 backdrop-blur-xs border-t border-[#765C48]/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          className="text-center max-w-3xl mx-auto mb-16 space-y-3"
+        >
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1D7C4] border border-[#68724F]/35 text-[#4F5A3D] text-xs font-mono font-medium shadow-xs">
             <Mail className="w-3.5 h-3.5 text-[#68724F]" />
             <span>Connect Directly</span>
@@ -195,11 +202,17 @@ export const Contact: React.FC = () => {
           <p className="text-[#4B382C]/90 text-sm sm:text-base leading-relaxed font-medium">
             Directly reachable for full-time Data Entry, Operations, ERP coordination, and reporting opportunities.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-5xl mx-auto items-start">
           {/* Left Column: Direct Verified Contact Cards */}
-          <div className="lg:col-span-5 space-y-4 text-left">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.15 }}
+            transition={{ duration: 0.5 }}
+            className="lg:col-span-5 space-y-4 text-left"
+          >
             {/* Email Card */}
             <div className="bg-[#FFFFFF] p-5 rounded-2xl border border-[#765C48]/20 hover:border-[#68724F]/50 shadow-xs hover:shadow-md transition-all">
               <div className="flex items-center justify-between mb-2">
@@ -318,10 +331,16 @@ export const Contact: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Column: Direct FormSubmit Inquiry Form */}
-          <div className="lg:col-span-7 bg-[#FFFFFF] p-6 sm:p-8 rounded-2xl border border-[#765C48]/20 text-left shadow-md">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.15 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="lg:col-span-7 bg-[#FFFFFF] p-6 sm:p-8 rounded-2xl border border-[#765C48]/20 text-left shadow-md"
+          >
             <div className="flex items-center justify-between mb-6 pb-4 border-b border-[#C9B89E]/70">
               <div>
                 <h3 className="text-base font-bold text-[#4B382C] flex items-center gap-2">
@@ -571,7 +590,7 @@ export const Contact: React.FC = () => {
                 </button>
               </div>
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

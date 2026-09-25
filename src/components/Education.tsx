@@ -8,7 +8,13 @@ export const Education: React.FC = () => {
     <section id="education" className="py-20 md:py-28 relative bg-[#EAE2D2]/85 backdrop-blur-xs border-t border-[#C9B89E]/70">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          className="text-center max-w-3xl mx-auto mb-16 space-y-3"
+        >
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1D7C4] border border-[#68724F]/35 text-[#4F5A3D] text-xs font-mono font-medium shadow-xs">
             <GraduationCap className="w-3.5 h-3.5 text-[#68724F]" />
             <span>Academic Background</span>
@@ -19,7 +25,7 @@ export const Education: React.FC = () => {
           <p className="text-[#665E55] text-sm sm:text-base leading-relaxed font-medium">
             Formal education credentials documented exactly as stated in the CV.
           </p>
-        </div>
+        </motion.div>
 
         {/* Education Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto text-left">
@@ -28,8 +34,8 @@ export const Education: React.FC = () => {
               key={item.id}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.15 }}
+              viewport={{ once: false, amount: 0.15 }}
+              transition={{ duration: 0.5, delay: idx * 0.12 }}
               className="bg-[#FFFFFF] p-6 sm:p-7 rounded-2xl border border-[#C9B89E] hover:border-[#68724F]/50 shadow-xs hover:shadow-md transition-all flex flex-col justify-between group"
             >
               <div>

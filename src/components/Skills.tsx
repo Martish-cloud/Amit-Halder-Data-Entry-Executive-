@@ -54,7 +54,13 @@ export const Skills: React.FC = () => {
     <section id="skills" className="py-20 md:py-28 relative bg-[#D5C7AF]/85 backdrop-blur-xs border-t border-[#C9B89E]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          className="text-center max-w-3xl mx-auto mb-14 space-y-3"
+        >
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E1D7C4] border border-[#68724F]/35 text-[#4F5A3D] text-xs font-mono font-medium shadow-xs">
             <Sparkles className="w-3.5 h-3.5 text-[#68724F]" />
             <span>Technical & Operational Capabilities</span>
@@ -65,7 +71,7 @@ export const Skills: React.FC = () => {
           <p className="text-[#665E55] text-sm sm:text-base leading-relaxed font-medium">
             Strictly derived from professional responsibilities in data validation, ERP administration, production analytics, and reporting.
           </p>
-        </div>
+        </motion.div>
 
         {/* Filter Controls Bar */}
         <div className="max-w-4xl mx-auto mb-10 flex flex-col sm:flex-row items-center justify-between gap-4">
@@ -104,18 +110,18 @@ export const Skills: React.FC = () => {
 
         {/* Skills Grid */}
         <div className="max-w-5xl mx-auto">
-          <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
-            <AnimatePresence>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
+            <AnimatePresence mode="popLayout">
               {filteredSkills.map((skill, index) => {
                 const Icon = getSkillIcon(skill.name);
 
                 return (
                   <motion.div
-                    layout
                     initial={{ opacity: 0, scale: 0.96 }}
-                    animate={{ opacity: 1, scale: 1 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: false, amount: 0.1 }}
                     exit={{ opacity: 0, scale: 0.96 }}
-                    transition={{ duration: 0.25, delay: index * 0.02 }}
+                    transition={{ duration: 0.25, delay: Math.min(index * 0.015, 0.2) }}
                     key={skill.name}
                     className="bg-[#FFFFFF] p-4 rounded-xl border border-[#C9B89E] hover:border-[#68724F]/50 hover:bg-[#EAE2D2] transition-all flex items-center justify-between text-left group shadow-xs hover:shadow-sm"
                   >
@@ -138,7 +144,7 @@ export const Skills: React.FC = () => {
                 );
               })}
             </AnimatePresence>
-          </motion.div>
+          </div>
 
           {filteredSkills.length === 0 && (
             <div className="text-center py-12 text-[#665E55] text-sm font-mono">
@@ -149,7 +155,13 @@ export const Skills: React.FC = () => {
 
         {/* Competency Group Breakdowns */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mt-16 text-left">
-          <div className="bg-[#FFFFFF] p-6 rounded-2xl border border-[#C9B89E] shadow-xs">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.15 }}
+            transition={{ duration: 0.4 }}
+            className="bg-[#FFFFFF] p-6 rounded-2xl border border-[#C9B89E] shadow-xs"
+          >
             <div className="flex items-center gap-2 mb-3">
               <Database className="w-4 h-4 text-[#68724F]" />
               <h4 className="text-sm font-bold text-[#4B382C] uppercase tracking-wider">
@@ -162,9 +174,15 @@ export const Skills: React.FC = () => {
             <div className="text-[11px] font-mono text-[#4F5A3D] font-semibold">
               14 Verified Core Methods
             </div>
-          </div>
+          </motion.div>
 
-          <div className="bg-[#FFFFFF] p-6 rounded-2xl border border-[#C9B89E] shadow-xs">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.15 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
+            className="bg-[#FFFFFF] p-6 rounded-2xl border border-[#C9B89E] shadow-xs"
+          >
             <div className="flex items-center gap-2 mb-3">
               <BarChart3 className="text-[#68724F] w-4 h-4" />
               <h4 className="text-sm font-bold text-[#4B382C] uppercase tracking-wider">
@@ -177,9 +195,15 @@ export const Skills: React.FC = () => {
             <div className="text-[11px] font-mono text-[#4F5A3D] font-semibold">
               5 Verified Analytical Capabilities
             </div>
-          </div>
+          </motion.div>
 
-          <div className="bg-[#FFFFFF] p-6 rounded-2xl border border-[#C9B89E] shadow-xs">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.15 }}
+            transition={{ duration: 0.4, delay: 0.2 }}
+            className="bg-[#FFFFFF] p-6 rounded-2xl border border-[#C9B89E] shadow-xs"
+          >
             <div className="flex items-center gap-2 mb-3">
               <Layers className="w-4 h-4 text-[#68724F]" />
               <h4 className="text-sm font-bold text-[#4B382C] uppercase tracking-wider">
@@ -192,7 +216,7 @@ export const Skills: React.FC = () => {
             <div className="text-[11px] font-mono text-[#4F5A3D] font-semibold">
               2 Core Enterprise Systems
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
